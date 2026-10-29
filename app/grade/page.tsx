@@ -56,8 +56,8 @@ export default function Grade() {
     const savedIdx = parseInt(localStorage.getItem(`bb_idx_${name}`) || "0", 10);
     setIdx(savedIdx);
 
-    fetch("/sample.json")
-      .then((r) => r.json())
+    fetch("/api/questions")
+      .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
       .then((data: Item[]) => setItems(data))
       .catch(() => setError("Failed to load items."));
   }, [router]);
