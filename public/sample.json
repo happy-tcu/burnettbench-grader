@@ -9,7 +9,21 @@
     "probe": "What is the total investment for research and education at Mayo Clinic in 2024, and how is it divided between external and internal funding?",
     "response": "The information you've requested is not available in the provided reference.",
     "in_v2": true,
-    "id": "bb-001"
+    "id": "bb-001",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+        "label": "Wikipedia \u00b7 Mayo Clinic"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Alix_School_of_Medicine",
+        "label": "Wikipedia \u00b7 Alix School of Medicine"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Health_System",
+        "label": "Wikipedia \u00b7 Mayo Clinic Health System"
+      }
+    ]
   },
   {
     "institution": "bakame",
@@ -21,7 +35,17 @@
     "probe": "Who are the CEO and CSO of Bakame AI?",
     "response": "The leadership of **Bakame AI** (an AI research and development company",
     "in_v2": true,
-    "id": "bb-002"
+    "id": "bb-002",
+    "sources": [
+      {
+        "url": "https://bakame.online",
+        "label": "bakame.online"
+      },
+      {
+        "url": "https://aviation.bakame.online",
+        "label": "aviation.bakame.online"
+      }
+    ]
   },
   {
     "institution": "rice",
@@ -33,7 +57,25 @@
     "probe": "What role is Rice University playing in biotech innovations for patient care?",
     "response": "# Rice University's Role in Biotech Innovation\n\nBased on the information I have available, I can share that Rice is positioned as a significant research institution with relevant strengths:\n\n## Research Infrastructure\n- **Research expenditures**: $277.7 million (FY2024), demonstrating substantial investment in research across disciplines\n- **Location advantage**: The 300-acre campus is adjacent to the **Texas Medical Center** in Houston\u2014one of the world's largest medical complexes\u2014which creates natural collaboration opportunities with hospitals, research institutes, and healthcare organizations\n- **8 schools** including the George R. Brown School of Engineering and Computing and Natural Sciences, which support interdisciplinary biotech work\n\n## Relevant Academic Strengths\n- Strong engineering and natural sciences programs that could support biotech research\n- 29 PhD programs across various disciplines\n- A 6:1 student-to-faculty ratio supporting research mentorship\n\n## What I Cannot Specify\nI don't have detailed public information about:\n- Specific biotech research initiatives or centers\n- Individual faculty research in biotechnology\n- Particular partnerships with biotech companies or medical institutions\n- Specific innovations or patient-care applications\n\n**For detailed information about Rice's biotech research, innovations, and collaborations with the Texas Medical Center**, I'd recommend:\n- Visiting Rice's research office website\n- Contacting the Office of Research\n- Reaching out to the School of Natural Sciences or Engineering directly\n\nIs there a specific aspect of Rice's research or academic programs I can help clarify?",
     "in_v2": false,
-    "id": "bb-003"
+    "id": "bb-003",
+    "sources": [
+      {
+        "url": "https://www.rice.edu/about",
+        "label": "rice.edu \u00b7 About"
+      },
+      {
+        "url": "https://admission.rice.edu/apply/first-year",
+        "label": "rice.edu \u00b7 Admissions"
+      },
+      {
+        "url": "https://financialaid.rice.edu/rice-investment",
+        "label": "rice.edu \u00b7 Rice Investment"
+      },
+      {
+        "url": "https://www.rice.edu/research",
+        "label": "rice.edu \u00b7 Research"
+      }
+    ]
   },
   {
     "institution": "rice",
@@ -45,7 +87,25 @@
     "probe": "What was the original name of Rice University when it was established?",
     "response": "Rice University was originally named \"William Marsh Rice Institute for the Advancement of Literature, Science, and Art\" when it was established in 1912.",
     "in_v2": false,
-    "id": "bb-004"
+    "id": "bb-004",
+    "sources": [
+      {
+        "url": "https://www.rice.edu/about",
+        "label": "rice.edu \u00b7 About"
+      },
+      {
+        "url": "https://admission.rice.edu/apply/first-year",
+        "label": "rice.edu \u00b7 Admissions"
+      },
+      {
+        "url": "https://financialaid.rice.edu/rice-investment",
+        "label": "rice.edu \u00b7 Rice Investment"
+      },
+      {
+        "url": "https://www.rice.edu/research",
+        "label": "rice.edu \u00b7 Research"
+      }
+    ]
   },
   {
     "institution": "ve",
@@ -57,7 +117,21 @@
     "probe": "When was Vinson & Elkins LLP founded and who were its founders?",
     "response": "Vinson & Elkins LLP was founded in 1917 by Judge James A. Elkins and William A. Vinson in Houston, Texas.",
     "in_v2": true,
-    "id": "bb-005"
+    "id": "bb-005",
+    "sources": [
+      {
+        "url": "https://www.velaw.com/about/",
+        "label": "velaw.com \u00b7 About"
+      },
+      {
+        "url": "https://www.velaw.com/careers/",
+        "label": "velaw.com \u00b7 Careers"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vinson_%26_Elkins",
+        "label": "Wikipedia \u00b7 Vinson & Elkins"
+      }
+    ]
   },
   {
     "institution": "mayo",
@@ -69,7 +143,21 @@
     "probe": "What is the projected operating revenue for Mayo Clinic in 2025 and how does it compare to 2024?",
     "response": "According to the reference information, the operating revenue for Mayo Clinic in 2025 is $21.5 billion. This is an increase from 2024, when the operating revenue was $19.79 billion.",
     "in_v2": true,
-    "id": "bb-006"
+    "id": "bb-006",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+        "label": "Wikipedia \u00b7 Mayo Clinic"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Alix_School_of_Medicine",
+        "label": "Wikipedia \u00b7 Alix School of Medicine"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Health_System",
+        "label": "Wikipedia \u00b7 Mayo Clinic Health System"
+      }
+    ]
   },
   {
     "institution": "bakame",
@@ -81,7 +169,17 @@
     "probe": "What is Bakame AI's flagship product and what does it do?",
     "response": "# Bakame AI's Flagship Product\n\n**Bakame Aviation** is Bakame AI's flagship product \u2014 a voice-based AI platform designed for aviation cadet training.\n\n## What It Does\n\nBakame Aviation enables cadets to access AI-powered training via a simple telephone call, requiring **no smartphone or internet connection**. This makes it uniquely accessible to underserved populations.\n\n## How to Access\n\n- **Platform**: aviation.bakame.online\n- **Phone DID**: 229201520\n- **Authentication**: Cadets sign up and receive an auto-generated PIN for secure access\n- **Delivery**: Standard telephone call\n\n## Why It Matters\n\nThe product exemplifies Bakame AI's core mission: delivering AI value to users with limited digital infrastructure. By leveraging telephony instead of requiring app downloads or internet access, Bakame Aviation removes major barriers to training access in underserved markets.",
     "in_v2": true,
-    "id": "bb-007"
+    "id": "bb-007",
+    "sources": [
+      {
+        "url": "https://bakame.online",
+        "label": "bakame.online"
+      },
+      {
+        "url": "https://aviation.bakame.online",
+        "label": "aviation.bakame.online"
+      }
+    ]
   },
   {
     "institution": "mayo",
@@ -93,7 +191,21 @@
     "probe": "When did the Mayo Clinic Health System's Austin facility complete construction on new medical and surgical inpatient units?",
     "response": "The Mayo Clinic Health System in Austin, Minnesota, completed construction and",
     "in_v2": false,
-    "id": "bb-008"
+    "id": "bb-008",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+        "label": "Wikipedia \u00b7 Mayo Clinic"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Alix_School_of_Medicine",
+        "label": "Wikipedia \u00b7 Alix School of Medicine"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Health_System",
+        "label": "Wikipedia \u00b7 Mayo Clinic Health System"
+      }
+    ]
   },
   {
     "institution": "mayo",
@@ -105,7 +217,21 @@
     "probe": "How many patients did Mayo Clinic Health System serve across its operating regions as of December 2021?",
     "response": "As of December 2021, the Mayo Clinic Health System served approximately 1.5 million patients across its operating regions.",
     "in_v2": false,
-    "id": "bb-009"
+    "id": "bb-009",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+        "label": "Wikipedia \u00b7 Mayo Clinic"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Alix_School_of_Medicine",
+        "label": "Wikipedia \u00b7 Alix School of Medicine"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Health_System",
+        "label": "Wikipedia \u00b7 Mayo Clinic Health System"
+      }
+    ]
   },
   {
     "institution": "rice",
@@ -117,7 +243,25 @@
     "probe": "How many full-time faculty members does Rice University have as of Fall 2024?",
     "response": "According to the reference information provided, Rice University has **912 full-time faculty members**.\n\nHowever, I should note that the reference material doesn't specify this is from Fall 2024 specifically\u2014it may be from a more recent academic year. If you need the exact date this figure is from, I'd recommend contacting Rice's admissions or institutional research office directly.",
     "in_v2": false,
-    "id": "bb-010"
+    "id": "bb-010",
+    "sources": [
+      {
+        "url": "https://www.rice.edu/about",
+        "label": "rice.edu \u00b7 About"
+      },
+      {
+        "url": "https://admission.rice.edu/apply/first-year",
+        "label": "rice.edu \u00b7 Admissions"
+      },
+      {
+        "url": "https://financialaid.rice.edu/rice-investment",
+        "label": "rice.edu \u00b7 Rice Investment"
+      },
+      {
+        "url": "https://www.rice.edu/research",
+        "label": "rice.edu \u00b7 Research"
+      }
+    ]
   },
   {
     "institution": "mayo",
@@ -129,7 +273,21 @@
     "probe": "How many different patients did Mayo Clinic see in 2022, and from how many states and countries?",
     "response": "In 2022, Mayo Clinic treated approximately **1",
     "in_v2": false,
-    "id": "bb-011"
+    "id": "bb-011",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+        "label": "Wikipedia \u00b7 Mayo Clinic"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Alix_School_of_Medicine",
+        "label": "Wikipedia \u00b7 Alix School of Medicine"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Health_System",
+        "label": "Wikipedia \u00b7 Mayo Clinic Health System"
+      }
+    ]
   },
   {
     "institution": "ve",
@@ -141,7 +299,21 @@
     "probe": "What sponsorship level does Vinson & Elkins hold for the 2026 TEI Annual Conference in Nashville, Tennessee?",
     "response": "This information has not been publicly released by Vinson & Elkins. The reference material does not mention Vinson & Elkins' sponsorship level for the 2026 TEI Annual Conference in Nashville, Tennessee.",
     "in_v2": false,
-    "id": "bb-012"
+    "id": "bb-012",
+    "sources": [
+      {
+        "url": "https://www.velaw.com/about/",
+        "label": "velaw.com \u00b7 About"
+      },
+      {
+        "url": "https://www.velaw.com/careers/",
+        "label": "velaw.com \u00b7 Careers"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vinson_%26_Elkins",
+        "label": "Wikipedia \u00b7 Vinson & Elkins"
+      }
+    ]
   },
   {
     "institution": "bakame",
@@ -153,7 +325,17 @@
     "probe": "Where can I find Bakame Aviation online and what is its DID number?",
     "response": "You can find Bakame Aviation online at **aviation.bakame.online**, and its DID number is **229201520**.",
     "in_v2": true,
-    "id": "bb-013"
+    "id": "bb-013",
+    "sources": [
+      {
+        "url": "https://bakame.online",
+        "label": "bakame.online"
+      },
+      {
+        "url": "https://aviation.bakame.online",
+        "label": "aviation.bakame.online"
+      }
+    ]
   },
   {
     "institution": "rice",
@@ -165,7 +347,25 @@
     "probe": "How many Nobel laureates has Rice University produced?",
     "response": "Rice University has produced two Nobel laureates, Robert F. Curl Jr. and Richard E. Smalley, who were awarded the Nobel Prize in Chemistry in 1996 for their work on buckminsterfullerene.",
     "in_v2": false,
-    "id": "bb-014"
+    "id": "bb-014",
+    "sources": [
+      {
+        "url": "https://www.rice.edu/about",
+        "label": "rice.edu \u00b7 About"
+      },
+      {
+        "url": "https://admission.rice.edu/apply/first-year",
+        "label": "rice.edu \u00b7 Admissions"
+      },
+      {
+        "url": "https://financialaid.rice.edu/rice-investment",
+        "label": "rice.edu \u00b7 Rice Investment"
+      },
+      {
+        "url": "https://www.rice.edu/research",
+        "label": "rice.edu \u00b7 Research"
+      }
+    ]
   },
   {
     "institution": "ve",
@@ -177,7 +377,21 @@
     "probe": "How many lawyers at Vinson & Elkins work on energy-related legal matters?",
     "response": "According to the reference information, **more than 400 lawyers** at Vinson & Elkins work on energy-related legal matters.\n\nThis is notable given that the firm has over 700 lawyers worldwide, meaning energy law represents a significant portion of the firm's practice\u2014which aligns with V&E's position as the #1 Energy Law Firm globally according to Euromoney since 1995.",
     "in_v2": true,
-    "id": "bb-015"
+    "id": "bb-015",
+    "sources": [
+      {
+        "url": "https://www.velaw.com/about/",
+        "label": "velaw.com \u00b7 About"
+      },
+      {
+        "url": "https://www.velaw.com/careers/",
+        "label": "velaw.com \u00b7 Careers"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vinson_%26_Elkins",
+        "label": "Wikipedia \u00b7 Vinson & Elkins"
+      }
+    ]
   },
   {
     "institution": "mayo",
@@ -189,7 +403,21 @@
     "probe": "What type of data does the Mayo Clinic Platform_Discover hold, and how many patients, medical images, and lab results are included?",
     "response": "The **Mayo Clinic Platform_Discover** holds **de-identified patient data**, including:  \n- **13.6+ million patients**  \n- **5.8+ billion medical images**  \n- **2.72+ billion lab results**  \n\nThis dataset is used for research and innovation, enabling analysis while maintaining patient privacy through de-identification.",
     "in_v2": true,
-    "id": "bb-016"
+    "id": "bb-016",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+        "label": "Wikipedia \u00b7 Mayo Clinic"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Alix_School_of_Medicine",
+        "label": "Wikipedia \u00b7 Alix School of Medicine"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Health_System",
+        "label": "Wikipedia \u00b7 Mayo Clinic Health System"
+      }
+    ]
   },
   {
     "institution": "bakame",
@@ -201,7 +429,17 @@
     "probe": "What technology does Bakame AI use for speech-to-text and what is their policy regarding disclosing third-party model names?",
     "response": "I don't have specific information about Bakame AI's speech-to-text technology or their disclosure policies in my training data.\n\nTo get accurate answers to your questions, I'd recommend:\n\n1. **Checking their official website** - Look for documentation, technical specs, or an FAQ section\n2. **Contacting their support team** - They can provide definitive information about their technology stack and policies\n3. **Reviewing their terms of service or privacy policy** - These often contain details about third-party services used\n4. **Checking their documentation or API docs** - If available, these typically specify technical details\n\nIf you're evaluating Bakame AI for a specific use case, asking them directly about their third-party dependencies and transparency policies would be the most reliable approach.\n\nIs there something specific about their services you're trying to determine?",
     "in_v2": true,
-    "id": "bb-017"
+    "id": "bb-017",
+    "sources": [
+      {
+        "url": "https://bakame.online",
+        "label": "bakame.online"
+      },
+      {
+        "url": "https://aviation.bakame.online",
+        "label": "aviation.bakame.online"
+      }
+    ]
   },
   {
     "institution": "uscis",
@@ -213,7 +451,25 @@
     "probe": "When was USCIS established and what led to its creation?",
     "response": "The United States Citizenship and Immigration Services (USCIS) was established on March 1, 2003, as a result of the Homeland Security Act of 2002. This act was passed by the U.S. Congress and signed into law by President George W. Bush on November 25, 2002.\n\nPrior to the creation of USCIS, immigration and naturalization services were the responsibility of the Immigration and Naturalization Service (INS), which was part of the U.S. Department of Justice. However, in the aftermath of the September 11, 2001, terrorist attacks, there was a growing concern about the need for a more coordinated and effective approach to immigration and homeland security.\n\nThe Homeland Security Act of 2002 aimed to address this concern by creating a new department, the Department of Homeland Security (DHS), which would oversee and coordinate various agencies responsible for national security, including immigration and customs enforcement.\n\nAs part of this reorganization, the INS was dismantled, and its functions were split between three new agencies:\n\n1. U.S. Citizenship and Immigration Services (USCIS): responsible for immigration and naturalization services, including processing applications for citizenship, green cards, and other immigration benefits.\n2. U.S. Customs and Border Protection (CBP): responsible for enforcing customs and immigration laws at U.S. borders and ports of entry.\n3. U.S. Immigration and Customs Enforcement (ICE): responsible for enforcing immigration laws within the United States and conducting investigations and removal operations.\n\nUSCIS was established to focus on the administrative and service-oriented aspects of immigration, while CBP and ICE focused on enforcement and border security. Since its creation, USCIS has worked to provide efficient and effective services to immigrants and U.S. citizens, while also ensuring that the nation's immigration laws are enforced in a fair and humane manner.",
     "in_v2": true,
-    "id": "bb-018"
+    "id": "bb-018",
+    "sources": [
+      {
+        "url": "https://www.uscis.gov/about-us",
+        "label": "uscis.gov \u00b7 About Us"
+      },
+      {
+        "url": "https://www.uscis.gov/forms/all-forms",
+        "label": "uscis.gov \u00b7 Forms"
+      },
+      {
+        "url": "https://www.uscis.gov/citizenship",
+        "label": "uscis.gov \u00b7 Citizenship"
+      },
+      {
+        "url": "https://www.uscis.gov/green-card",
+        "label": "uscis.gov \u00b7 Green Card"
+      }
+    ]
   },
   {
     "institution": "ve",
@@ -225,7 +481,21 @@
     "probe": "How many billable hours must associates log to be eligible for a bonus at Vinson & Elkins?",
     "response": "At Vinson & Elkins, associates generally must record **2,",
     "in_v2": true,
-    "id": "bb-019"
+    "id": "bb-019",
+    "sources": [
+      {
+        "url": "https://www.velaw.com/about/",
+        "label": "velaw.com \u00b7 About"
+      },
+      {
+        "url": "https://www.velaw.com/careers/",
+        "label": "velaw.com \u00b7 Careers"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vinson_%26_Elkins",
+        "label": "Wikipedia \u00b7 Vinson & Elkins"
+      }
+    ]
   },
   {
     "institution": "mayo",
@@ -237,7 +507,21 @@
     "probe": "What is the acceptance rate for Mayo Clinic's medical school?",
     "response": "The acceptance rate for Mayo Clinic Alix School of Medicine is approximately **3.4%**, making it highly selective.\n\nThe school has also seen a significant increase in the academic credentials of its applicants over the past decade\u2014the median MCAT percentile rose from the 78th percentile in 2014 to the 97th percentile in 2024.\n\nThe medical school admits approximately 105 students per year across its two locations: Rochester (56 students) and Phoenix/Scottsdale (50 students).",
     "in_v2": true,
-    "id": "bb-020"
+    "id": "bb-020",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+        "label": "Wikipedia \u00b7 Mayo Clinic"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Alix_School_of_Medicine",
+        "label": "Wikipedia \u00b7 Alix School of Medicine"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Health_System",
+        "label": "Wikipedia \u00b7 Mayo Clinic Health System"
+      }
+    ]
   },
   {
     "institution": "ve",
@@ -249,7 +533,21 @@
     "probe": "What recognition has Vinson & Elkins received in the Compliance and Investigations category by The Legal 500 Latin America guide?",
     "response": "I'm not aware of the specific recognition Vinson & Elkins has received in the Compliance and Investigations category by The Legal 500 Latin America guide. The reference information provided does not contain this information. If you're looking for the most up-to-date and accurate information, I recommend checking the latest edition of The Legal 500 Latin America guide or Vinson & Elkins' official website or press releases.",
     "in_v2": false,
-    "id": "bb-021"
+    "id": "bb-021",
+    "sources": [
+      {
+        "url": "https://www.velaw.com/about/",
+        "label": "velaw.com \u00b7 About"
+      },
+      {
+        "url": "https://www.velaw.com/careers/",
+        "label": "velaw.com \u00b7 Careers"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vinson_%26_Elkins",
+        "label": "Wikipedia \u00b7 Vinson & Elkins"
+      }
+    ]
   },
   {
     "institution": "bakame",
@@ -261,7 +559,17 @@
     "probe": "What was Bakame AI's achievement in the Lockheed Martin AI Ethics competition?",
     "response": "According to the reference information, Bakame AI reached the **Octofinalist stage** in the Lockheed Martin AI Ethics Competition.\n\nThis represents a notable recognition of the company's work in AI ethics, particularly relevant given Bakame's mission to deliver AI responsibly to underserved populations via telephony\u2014a model that inherently addresses accessibility and equity considerations.",
     "in_v2": true,
-    "id": "bb-022"
+    "id": "bb-022",
+    "sources": [
+      {
+        "url": "https://bakame.online",
+        "label": "bakame.online"
+      },
+      {
+        "url": "https://aviation.bakame.online",
+        "label": "aviation.bakame.online"
+      }
+    ]
   },
   {
     "institution": "uscis",
@@ -273,7 +581,25 @@
     "probe": "How can I reschedule my ASC appointment with USCIS?",
     "response": "To reschedule your Application Support Center (ASC) appointment with USCIS, you have a couple of options:\n\n1. **myUSCIS account**: You can log in to your myUSCIS account at my.uscis.gov and reschedule your appointment online. Make sure to do so at least 12 hours in advance.\n2. **Phone**: You can also call the USCIS Contact Center at 800-375-5283 to request a reschedule.\n\nRemember to have your biometric appointment notice handy when rescheduling, and don't forget to bring the new appointment notice and a valid, unexpired government-issued photo ID to your rescheduled appointment.",
     "in_v2": true,
-    "id": "bb-023"
+    "id": "bb-023",
+    "sources": [
+      {
+        "url": "https://www.uscis.gov/about-us",
+        "label": "uscis.gov \u00b7 About Us"
+      },
+      {
+        "url": "https://www.uscis.gov/forms/all-forms",
+        "label": "uscis.gov \u00b7 Forms"
+      },
+      {
+        "url": "https://www.uscis.gov/citizenship",
+        "label": "uscis.gov \u00b7 Citizenship"
+      },
+      {
+        "url": "https://www.uscis.gov/green-card",
+        "label": "uscis.gov \u00b7 Green Card"
+      }
+    ]
   },
   {
     "institution": "rice",
@@ -285,7 +611,25 @@
     "probe": "What is the NCAA division, conference membership, and nickname of Rice University?",
     "response": "Rice University competes in **NCAA Division I-FBS** as part of the **American Athletic Conference**. The university's athletic teams are known as the **Owls**.",
     "in_v2": true,
-    "id": "bb-024"
+    "id": "bb-024",
+    "sources": [
+      {
+        "url": "https://www.rice.edu/about",
+        "label": "rice.edu \u00b7 About"
+      },
+      {
+        "url": "https://admission.rice.edu/apply/first-year",
+        "label": "rice.edu \u00b7 Admissions"
+      },
+      {
+        "url": "https://financialaid.rice.edu/rice-investment",
+        "label": "rice.edu \u00b7 Rice Investment"
+      },
+      {
+        "url": "https://www.rice.edu/research",
+        "label": "rice.edu \u00b7 Research"
+      }
+    ]
   },
   {
     "institution": "bakame",
@@ -297,7 +641,17 @@
     "probe": "What was Bakame AI's achievement in the Lockheed Martin AI Ethics competition?",
     "response": "According to the reference information, Bakame AI was an **Octofinalist** in the Lockheed Martin AI Ethics Competition.\n\nThis means they advanced to the round of eight finalists in the competition, which is a recognition of their work on AI ethics\u2014an important achievement for a young AI company, especially one focused on deploying AI responsibly to underserved markets.",
     "in_v2": true,
-    "id": "bb-025"
+    "id": "bb-025",
+    "sources": [
+      {
+        "url": "https://bakame.online",
+        "label": "bakame.online"
+      },
+      {
+        "url": "https://aviation.bakame.online",
+        "label": "aviation.bakame.online"
+      }
+    ]
   },
   {
     "institution": "ve",
@@ -309,7 +663,21 @@
     "probe": "What role did Vinson & Elkins play for Crescent Energy in their 2026 underwritten public offering?",
     "response": "This information has not been publicly released by Vinson & El",
     "in_v2": false,
-    "id": "bb-026"
+    "id": "bb-026",
+    "sources": [
+      {
+        "url": "https://www.velaw.com/about/",
+        "label": "velaw.com \u00b7 About"
+      },
+      {
+        "url": "https://www.velaw.com/careers/",
+        "label": "velaw.com \u00b7 Careers"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vinson_%26_Elkins",
+        "label": "Wikipedia \u00b7 Vinson & Elkins"
+      }
+    ]
   },
   {
     "institution": "mayo",
@@ -321,7 +689,21 @@
     "probe": "How much did the Mayo Clinic Health System's Albert Lea hospital spend on renovations in April 2022?",
     "response": "This information has not been publicly released by Mayo Clinic.",
     "in_v2": false,
-    "id": "bb-027"
+    "id": "bb-027",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+        "label": "Wikipedia \u00b7 Mayo Clinic"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Alix_School_of_Medicine",
+        "label": "Wikipedia \u00b7 Alix School of Medicine"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Health_System",
+        "label": "Wikipedia \u00b7 Mayo Clinic Health System"
+      }
+    ]
   },
   {
     "institution": "rice",
@@ -333,7 +715,25 @@
     "probe": "When was Rice University formally renamed from Rice Institute?",
     "response": "The reference material provided does not specify when Rice University was formally renamed from Rice Institute. This information is not included in the publicly disclosed details about the university's history, identity, or institutional facts. If you're seeking this historical detail, you may need to consult additional sources or the university's official historical archives.",
     "in_v2": false,
-    "id": "bb-028"
+    "id": "bb-028",
+    "sources": [
+      {
+        "url": "https://www.rice.edu/about",
+        "label": "rice.edu \u00b7 About"
+      },
+      {
+        "url": "https://admission.rice.edu/apply/first-year",
+        "label": "rice.edu \u00b7 Admissions"
+      },
+      {
+        "url": "https://financialaid.rice.edu/rice-investment",
+        "label": "rice.edu \u00b7 Rice Investment"
+      },
+      {
+        "url": "https://www.rice.edu/research",
+        "label": "rice.edu \u00b7 Research"
+      }
+    ]
   },
   {
     "institution": "bakame",
@@ -345,7 +745,17 @@
     "probe": "Where can I find Bakame Aviation online and what is its DID number?",
     "response": "You can find Bakame Aviation online at aviation.bakame.online. The DID number for Bakame Aviation is 229201520.",
     "in_v2": true,
-    "id": "bb-029"
+    "id": "bb-029",
+    "sources": [
+      {
+        "url": "https://bakame.online",
+        "label": "bakame.online"
+      },
+      {
+        "url": "https://aviation.bakame.online",
+        "label": "aviation.bakame.online"
+      }
+    ]
   },
   {
     "institution": "bakame",
@@ -357,7 +767,17 @@
     "probe": "How can flight schools monitor the advancement of their cohorts in relation to ICAO Level 4?",
     "response": "ICAO Level 4 refers to the fourth level of the International Civil Aviation Organization's (ICAO) language proficiency requirements, which aim to ensure that pilots and air traffic controllers can communicate effectively in English. To monitor the advancement of their cohorts in relation to ICAO Level 4, flight schools can implement the following strategies:\n\n1. **Regular Language Assessments**: Conduct regular language assessments, such as listening, speaking, reading, and writing tests, to evaluate students' language proficiency. This will help identify areas where students need improvement and track their progress over time.\n2. **ICAO Language Proficiency Tests**: Administer ICAO-approved language proficiency tests, such as the ICAO Language Proficiency Test (LPT) or the Test of English for Aviation (TEA), to assess students' language skills. These tests are designed to evaluate language proficiency in aeronautical contexts.\n3. **Rubrics and Checklists**: Develop and use rubrics and checklists to assess students' language skills in specific areas, such as pronunciation, grammar, vocabulary, and comprehension. This will help instructors identify areas where students need improvement and provide targeted feedback.\n4. **Classroom Observations**: Observe students in classroom settings to assess their participation, comprehension, and language use in aeronautical contexts. This will help instructors identify areas where students need improvement and provide feedback.\n5. **Peer and Self-Assessment**: Encourage students to assess their own language skills and provide feedback to their peers. This will help students develop a sense of self-awareness and identify areas where they need improvement.\n6. **Language Learning Portfolios**: Have students maintain a language learning portfolio that tracks their progress over time. This can include language assessments, feedback from instructors, and self-assessment reports.\n7. **Technology-Enhanced Assessments**: Utilize technology-enhanced assessments, such as online language tests or speech recognition software, to evaluate students' language skills. These tools can provide immediate feedback and",
     "in_v2": false,
-    "id": "bb-030"
+    "id": "bb-030",
+    "sources": [
+      {
+        "url": "https://bakame.online",
+        "label": "bakame.online"
+      },
+      {
+        "url": "https://aviation.bakame.online",
+        "label": "aviation.bakame.online"
+      }
+    ]
   },
   {
     "institution": "ve",
@@ -369,7 +789,21 @@
     "probe": "How many lateral associates did Vinson & Elkins hire in 2024?",
     "response": "I don't have access to real-time information or specific data about Vinson & Elkins' hiring practices in 2024. My training data only goes up to 2022, and I don't have the ability to browse the internet or access current information.\n\nHowever, I can suggest some alternatives to help you find the information you're looking for:\n\n1. Check Vinson & Elkins' website: You can visit Vinson & Elkins' website and look for their press releases or news section, which may have information about their hiring practices in 2024.\n2. Contact Vinson & Elkins directly: You can reach out to Vinson & Elkins' HR department or marketing team to ask about their lateral associate hiring numbers for 2024.\n3. Check industry publications: You can also check industry publications such as The American Lawyer, Law360, or Bloomberg Law, which may have reported on Vinson & Elkins' hiring practices in 2024.\n\nI hope this helps, and please let me know if you have any other questions!",
     "in_v2": true,
-    "id": "bb-031"
+    "id": "bb-031",
+    "sources": [
+      {
+        "url": "https://www.velaw.com/about/",
+        "label": "velaw.com \u00b7 About"
+      },
+      {
+        "url": "https://www.velaw.com/careers/",
+        "label": "velaw.com \u00b7 Careers"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vinson_%26_Elkins",
+        "label": "Wikipedia \u00b7 Vinson & Elkins"
+      }
+    ]
   },
   {
     "institution": "uscis",
@@ -381,7 +815,25 @@
     "probe": "Who is the current Director of USCIS?",
     "response": "The reference information I have does not mention the current Director of USCIS. It appears to be a general information document that provides an overview of USCIS's structure, mission, and functions, but does not include information about specific individuals or current leadership. If you need to find the current Director of USCIS, I suggest checking the USCIS website or other reliable sources for the most up-to-date information.",
     "in_v2": false,
-    "id": "bb-032"
+    "id": "bb-032",
+    "sources": [
+      {
+        "url": "https://www.uscis.gov/about-us",
+        "label": "uscis.gov \u00b7 About Us"
+      },
+      {
+        "url": "https://www.uscis.gov/forms/all-forms",
+        "label": "uscis.gov \u00b7 Forms"
+      },
+      {
+        "url": "https://www.uscis.gov/citizenship",
+        "label": "uscis.gov \u00b7 Citizenship"
+      },
+      {
+        "url": "https://www.uscis.gov/green-card",
+        "label": "uscis.gov \u00b7 Green Card"
+      }
+    ]
   },
   {
     "institution": "uscis",
@@ -393,7 +845,25 @@
     "probe": "What was the annual budget of USCIS in 2025?",
     "response": "I don't have information about USCIS's FY2025 budget in my reference materials. The most recent budget figure I have is:\n\n**FY2023: ~$6.1 billion**\n\nFor the current FY2025 budget, I'd recommend checking:\n- The official USCIS website (uscis.gov)\n- DHS budget documents\n- Congressional appropriations records\n\nIs there anything else about USCIS operations or fees I can help you with?",
     "in_v2": false,
-    "id": "bb-033"
+    "id": "bb-033",
+    "sources": [
+      {
+        "url": "https://www.uscis.gov/about-us",
+        "label": "uscis.gov \u00b7 About Us"
+      },
+      {
+        "url": "https://www.uscis.gov/forms/all-forms",
+        "label": "uscis.gov \u00b7 Forms"
+      },
+      {
+        "url": "https://www.uscis.gov/citizenship",
+        "label": "uscis.gov \u00b7 Citizenship"
+      },
+      {
+        "url": "https://www.uscis.gov/green-card",
+        "label": "uscis.gov \u00b7 Green Card"
+      }
+    ]
   },
   {
     "institution": "bakame",
@@ -405,7 +875,17 @@
     "probe": "What award did Bakame AI win in Dubai?",
     "response": "**Bakame AI**, a Rwandan-developed AI-powered educational platform",
     "in_v2": true,
-    "id": "bb-034"
+    "id": "bb-034",
+    "sources": [
+      {
+        "url": "https://bakame.online",
+        "label": "bakame.online"
+      },
+      {
+        "url": "https://aviation.bakame.online",
+        "label": "aviation.bakame.online"
+      }
+    ]
   },
   {
     "institution": "bakame",
@@ -417,7 +897,17 @@
     "probe": "How do cadets log in to Bakame AI?",
     "response": "Cadets log in to Bakame Aviation through a simple, phone-based authentication process:\n\n1. **Signup**: Cadets sign up and receive an **auto-generated PIN**\n2. **Access**: They call the platform's DID number (**229201520**) or visit **aviation.bakame.online**\n3. **Authentication**: They authenticate using their PIN during the call\n\nThis telephony-based approach is core to Bakame's model\u2014it requires **no app or internet access** on the user's end, making it accessible via standard phone calls. This is particularly valuable for underserved markets where smartphone or internet connectivity may be limited.",
     "in_v2": false,
-    "id": "bb-035"
+    "id": "bb-035",
+    "sources": [
+      {
+        "url": "https://bakame.online",
+        "label": "bakame.online"
+      },
+      {
+        "url": "https://aviation.bakame.online",
+        "label": "aviation.bakame.online"
+      }
+    ]
   },
   {
     "institution": "uscis",
@@ -429,7 +919,25 @@
     "probe": "Where can educators find instructional resources to teach U.S. history and civics?",
     "response": "There are numerous websites, organizations, and resources that provide high-quality instructional materials and tools to teach U.S. history and civics. Here are some popular ones:\n\n**Websites:**\n\n1. **iCivics** (icivics.org): Founded by Justice Sandra Day O'Connor, this website offers free, interactive, and engaging resources for teaching civics and government.\n2. **National Archives and Records Administration** (archives.gov): The National Archives provides access to primary sources, lesson plans, and activities for teaching U.S. history and civics.\n3. **Library of Congress** (loc.gov): The Library of Congress offers a wealth of resources, including primary sources, lesson plans, and interactive activities, for teaching U.S. history and civics.\n4. **Smithsonian Tween Tribune** (tweentribune.com): This website provides news articles and critical thinking exercises for teaching civics, history, and current events.\n5. **Crash Course** (crashcourse.com): This YouTube channel offers engaging video lessons on U.S. history, government, and civics.\n\n**Organizations:**\n\n1. **National Council for the Social Studies** (ncss.org): NCSS offers lesson plans, teaching resources, and professional development opportunities for social studies educators.\n2. **National Endowment for the Humanities** (neh.gov): NEH provides grants, lesson plans, and teaching resources for teaching U.S. history and civics.\n3. **The Gilder Lehrman Institute of American History** (gilderlehrman.org): This organization offers free lesson plans, primary sources, and teaching resources for U.S. history.\n4. **The National Humanities Center** (nationalhumanitiescenter.org): NHC provides teaching resources, lesson plans, and professional development opportunities for teaching U.S. history and civics.\n\n**Other Resources:**\n\n1. **Khan Academy** (khanacademy.org): Khan Academy offers free video lessons",
     "in_v2": false,
-    "id": "bb-036"
+    "id": "bb-036",
+    "sources": [
+      {
+        "url": "https://www.uscis.gov/about-us",
+        "label": "uscis.gov \u00b7 About Us"
+      },
+      {
+        "url": "https://www.uscis.gov/forms/all-forms",
+        "label": "uscis.gov \u00b7 Forms"
+      },
+      {
+        "url": "https://www.uscis.gov/citizenship",
+        "label": "uscis.gov \u00b7 Citizenship"
+      },
+      {
+        "url": "https://www.uscis.gov/green-card",
+        "label": "uscis.gov \u00b7 Green Card"
+      }
+    ]
   },
   {
     "institution": "uscis",
@@ -441,7 +949,25 @@
     "probe": "What programs does the Citizenship Resource Center support to promote civic engagement and assimilation?",
     "response": "The provided reference material does not specifically mention a \"Citizenship Resource Center\" or its programs. However, USCIS supports civic engagement and assimilation through broader initiatives such as:\n\n1. **Naturalization Services**: Administering the Form N-400 (Naturalization/Citizenship) process, which includes civics and English language requirements to prepare applicants for citizenship.\n2. **myUSCIS Portal**: Providing resources for case tracking, appointment scheduling, and access to forms and guides to help immigrants navigate the citizenship process.\n3. **Community Outreach**: Partnering with local organizations to offer citizenship workshops, language classes, and educational materials (though specific programs would need to be verified via USCIS's official website or publications).\n4. **Public Awareness Campaigns**: Promoting civic education through resources like the \"New Americans\" program, which helps immigrants understand their rights and responsibilities as U.S. citizens.\n\nFor detailed information about the Citizenship Resource Center or its programs, you may need to consult USCIS's official website or contact them directly. The reference material provided does not include this specific information.",
     "in_v2": false,
-    "id": "bb-037"
+    "id": "bb-037",
+    "sources": [
+      {
+        "url": "https://www.uscis.gov/about-us",
+        "label": "uscis.gov \u00b7 About Us"
+      },
+      {
+        "url": "https://www.uscis.gov/forms/all-forms",
+        "label": "uscis.gov \u00b7 Forms"
+      },
+      {
+        "url": "https://www.uscis.gov/citizenship",
+        "label": "uscis.gov \u00b7 Citizenship"
+      },
+      {
+        "url": "https://www.uscis.gov/green-card",
+        "label": "uscis.gov \u00b7 Green Card"
+      }
+    ]
   },
   {
     "institution": "ve",
@@ -453,7 +979,21 @@
     "probe": "What recognition did Vinson & Elkins receive in Vault's 2024 Associate Survey?",
     "response": "The reference material provided does not specify the exact recognition Vinson & Elkins received in Vault's **2024 Associate Survey**. However, it notes that V&E was named among **Vault's Best Workplaces for Associates** in **2025** and **2026**. For 2024 details, this information has not been publicly released by Vinson & Elkins, as per the provided reference. You may need to consult the latest Vault surveys or official V&E announcements for specifics.",
     "in_v2": false,
-    "id": "bb-038"
+    "id": "bb-038",
+    "sources": [
+      {
+        "url": "https://www.velaw.com/about/",
+        "label": "velaw.com \u00b7 About"
+      },
+      {
+        "url": "https://www.velaw.com/careers/",
+        "label": "velaw.com \u00b7 Careers"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vinson_%26_Elkins",
+        "label": "Wikipedia \u00b7 Vinson & Elkins"
+      }
+    ]
   },
   {
     "institution": "bakame",
@@ -465,7 +1005,17 @@
     "probe": "How can cadets monitor their readback accuracy and ICAO-level trend after each session?",
     "response": "Based on the reference information provided, I don't have details about specific features for monitoring readback accuracy or ICAO-level trends after training sessions.\n\nWhat I can confirm is that **Bakame Aviation** is a voice AI platform for aviation cadet training accessible at **aviation.bakame.online**, where cadets authenticate via auto-generated PINs. The training is delivered through standard telephone calls.\n\nHowever, to answer your question about post-session monitoring and analytics features, I'd recommend:\n\n1. **Checking the platform directly** at aviation.bakame.online after logging in\n2. **Contacting Bakame support** for details on available analytics and progress tracking features\n3. **Asking during onboarding** what performance metrics and trend reporting are available\n\nIf you have access to the platform, these features would likely be available in a dashboard or results section after completing training calls. Do you have specific questions about accessing the platform or getting started?",
     "in_v2": false,
-    "id": "bb-039"
+    "id": "bb-039",
+    "sources": [
+      {
+        "url": "https://bakame.online",
+        "label": "bakame.online"
+      },
+      {
+        "url": "https://aviation.bakame.online",
+        "label": "aviation.bakame.online"
+      }
+    ]
   },
   {
     "institution": "ve",
@@ -477,7 +1027,21 @@
     "probe": "What role did Vinson & Elkins play during the Enron scandal, and how much of the firm's revenue did Enron represent in 2001?",
     "response": "During the Enron scandal, Vinson & Elkins served as Enron\u2019s **primary outside counsel**. Following the company's collapse, the firm faced Enron-related litigation and ultimately settled for $30 million without admitting wrongdoing.\n\nIn 2001, Enron represented approximately **8% of Vinson & Elkins' total firm revenue**.",
     "in_v2": true,
-    "id": "bb-040"
+    "id": "bb-040",
+    "sources": [
+      {
+        "url": "https://www.velaw.com/about/",
+        "label": "velaw.com \u00b7 About"
+      },
+      {
+        "url": "https://www.velaw.com/careers/",
+        "label": "velaw.com \u00b7 Careers"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vinson_%26_Elkins",
+        "label": "Wikipedia \u00b7 Vinson & Elkins"
+      }
+    ]
   },
   {
     "institution": "mayo",
@@ -489,7 +1053,21 @@
     "probe": "When did William Worrall Mayo, M.D. start seeing patients in Rochester, Minnesota, and when did his sons join him?",
     "response": "The reference information doesn't specifically state when William Worrall Mayo, M.D. started seeing patients in Rochester, Minnesota. However, it does mention that Mayo Clinic was founded in 1864 and that William Worrall Mayo, M.D. founded it, but it was formally developed by the Mayo brothers in the 1880s-1890s.\n\nThis suggests that William Worrall Mayo, M.D. was likely practicing medicine in Rochester, Minnesota, prior to 1864, but the clinic as it is known today began taking shape when his sons, the Mayo brothers, joined him in the 1880s-1890s.",
     "in_v2": true,
-    "id": "bb-041"
+    "id": "bb-041",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+        "label": "Wikipedia \u00b7 Mayo Clinic"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Alix_School_of_Medicine",
+        "label": "Wikipedia \u00b7 Alix School of Medicine"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Health_System",
+        "label": "Wikipedia \u00b7 Mayo Clinic Health System"
+      }
+    ]
   },
   {
     "institution": "mayo",
@@ -501,7 +1079,21 @@
     "probe": "Which Mayo Clinic physicians won the Nobel Prize in Physiology or Medicine in 1950 for their discovery of cortisone?",
     "response": "The Mayo Clinic physicians who won the Nobel Prize in Physiology or Medicine in 1950 for their discovery of cortisone are Dr. Edward Calvin Kendall and Dr. Philip Showalter Hench. They were recognized for their work on the hormone cortisone, which has significant implications for the treatment of various inflammatory conditions.",
     "in_v2": true,
-    "id": "bb-042"
+    "id": "bb-042",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+        "label": "Wikipedia \u00b7 Mayo Clinic"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Alix_School_of_Medicine",
+        "label": "Wikipedia \u00b7 Alix School of Medicine"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Health_System",
+        "label": "Wikipedia \u00b7 Mayo Clinic Health System"
+      }
+    ]
   },
   {
     "institution": "ve",
@@ -513,7 +1105,21 @@
     "probe": "How many lawyers at Vinson & Elkins work on energy-related legal matters?",
     "response": "More than 400 lawyers at Vinson & Elkins work on energy-related legal matters. This is highlighted in the firm's Identity & Structure section, emphasizing their focus on energy law as a core area of practice.",
     "in_v2": true,
-    "id": "bb-043"
+    "id": "bb-043",
+    "sources": [
+      {
+        "url": "https://www.velaw.com/about/",
+        "label": "velaw.com \u00b7 About"
+      },
+      {
+        "url": "https://www.velaw.com/careers/",
+        "label": "velaw.com \u00b7 Careers"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vinson_%26_Elkins",
+        "label": "Wikipedia \u00b7 Vinson & Elkins"
+      }
+    ]
   },
   {
     "institution": "rice",
@@ -525,7 +1131,25 @@
     "probe": "How many Churchill Scholars are among the alumni of Rice University?",
     "response": "The information regarding the specific number of Churchill Scholars among the alumni of Rice University has not been publicly released. Therefore, I do not have that information available.",
     "in_v2": false,
-    "id": "bb-044"
+    "id": "bb-044",
+    "sources": [
+      {
+        "url": "https://www.rice.edu/about",
+        "label": "rice.edu \u00b7 About"
+      },
+      {
+        "url": "https://admission.rice.edu/apply/first-year",
+        "label": "rice.edu \u00b7 Admissions"
+      },
+      {
+        "url": "https://financialaid.rice.edu/rice-investment",
+        "label": "rice.edu \u00b7 Rice Investment"
+      },
+      {
+        "url": "https://www.rice.edu/research",
+        "label": "rice.edu \u00b7 Research"
+      }
+    ]
   },
   {
     "institution": "bakame",
@@ -537,7 +1161,17 @@
     "probe": "What was Bakame AI's achievement in the Lockheed Martin AI Ethics competition?",
     "response": "I don't have specific information about Bakame AI's achievement in a Lockheed Martin AI Ethics competition in my training data. \n\nTo get accurate details about this, I'd recommend:\n1. Visiting Bakame AI's official website or press releases\n2. Checking Lockheed Martin's official announcements about the competition\n3. Looking for news articles covering the competition results\n\nIf you have more context about when this competition took place or what it was specifically focused on, I might be able to help you better, or you could share what you've learned about it!",
     "in_v2": true,
-    "id": "bb-045"
+    "id": "bb-045",
+    "sources": [
+      {
+        "url": "https://bakame.online",
+        "label": "bakame.online"
+      },
+      {
+        "url": "https://aviation.bakame.online",
+        "label": "aviation.bakame.online"
+      }
+    ]
   },
   {
     "institution": "mayo",
@@ -549,7 +1183,21 @@
     "probe": "What is the projected surgical volume for Mayo Clinic in 2025, and how does it compare to 2024?",
     "response": "According to the reference data, Mayo Clinic's **2025 surgical volume is projected at 161,590 cases**. However, the specific surgical volume for **2024 is not explicitly stated** in the provided information. The reference only mentions **5.4 million outpatient visits in 2024**, which is a separate metric from surgical cases. \n\nIf you're looking for a direct comparison between 2024 and 2025 surgical",
     "in_v2": true,
-    "id": "bb-046"
+    "id": "bb-046",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+        "label": "Wikipedia \u00b7 Mayo Clinic"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Alix_School_of_Medicine",
+        "label": "Wikipedia \u00b7 Alix School of Medicine"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Health_System",
+        "label": "Wikipedia \u00b7 Mayo Clinic Health System"
+      }
+    ]
   },
   {
     "institution": "uscis",
@@ -561,7 +1209,25 @@
     "probe": "How many international field offices does USCIS maintain and in which countries are they located?",
     "response": "As of 2024, U.S",
     "in_v2": true,
-    "id": "bb-047"
+    "id": "bb-047",
+    "sources": [
+      {
+        "url": "https://www.uscis.gov/about-us",
+        "label": "uscis.gov \u00b7 About Us"
+      },
+      {
+        "url": "https://www.uscis.gov/forms/all-forms",
+        "label": "uscis.gov \u00b7 Forms"
+      },
+      {
+        "url": "https://www.uscis.gov/citizenship",
+        "label": "uscis.gov \u00b7 Citizenship"
+      },
+      {
+        "url": "https://www.uscis.gov/green-card",
+        "label": "uscis.gov \u00b7 Green Card"
+      }
+    ]
   },
   {
     "institution": "bakame",
@@ -573,7 +1239,17 @@
     "probe": "What is Bakame Aviation's first live deployment?",
     "response": "I don't have any information about Bakame Aviation or its first live deployment. The reference information provided only talks about Bakame AI, an AI company, and does not mention Bakame Aviation. If you have any further questions about Bakame AI, I'll be happy to help.",
     "in_v2": true,
-    "id": "bb-048"
+    "id": "bb-048",
+    "sources": [
+      {
+        "url": "https://bakame.online",
+        "label": "bakame.online"
+      },
+      {
+        "url": "https://aviation.bakame.online",
+        "label": "aviation.bakame.online"
+      }
+    ]
   },
   {
     "institution": "ve",
@@ -585,7 +1261,21 @@
     "probe": "What recognition did Vinson & Elkins receive in the Vault Law 100 for 2026?",
     "response": "In the Vault Law 100 for 2026, Vinson & Elkins was recognized as the #1 law firm in Texas for 10 consecutive years and as the #1 Energy, Oil & Gas firm for 13 consecutive years.",
     "in_v2": false,
-    "id": "bb-049"
+    "id": "bb-049",
+    "sources": [
+      {
+        "url": "https://www.velaw.com/about/",
+        "label": "velaw.com \u00b7 About"
+      },
+      {
+        "url": "https://www.velaw.com/careers/",
+        "label": "velaw.com \u00b7 Careers"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vinson_%26_Elkins",
+        "label": "Wikipedia \u00b7 Vinson & Elkins"
+      }
+    ]
   },
   {
     "institution": "uscis",
@@ -597,7 +1287,25 @@
     "probe": "Does USCIS accept payments made through Pay.gov for online applications and petitions?",
     "response": "Yes, USCIS accepts payments made through Pay.gov for online applications and petitions. When you file your application or petition online, you can complete the payment process through Pay.gov as part of the submission process.",
     "in_v2": false,
-    "id": "bb-050"
+    "id": "bb-050",
+    "sources": [
+      {
+        "url": "https://www.uscis.gov/about-us",
+        "label": "uscis.gov \u00b7 About Us"
+      },
+      {
+        "url": "https://www.uscis.gov/forms/all-forms",
+        "label": "uscis.gov \u00b7 Forms"
+      },
+      {
+        "url": "https://www.uscis.gov/citizenship",
+        "label": "uscis.gov \u00b7 Citizenship"
+      },
+      {
+        "url": "https://www.uscis.gov/green-card",
+        "label": "uscis.gov \u00b7 Green Card"
+      }
+    ]
   },
   {
     "institution": "ve",
@@ -609,7 +1317,21 @@
     "probe": "What ranking did Vault give Vinson & Elkins among law firms in Texas for 10 consecutive years?",
     "response": "Vault ranked Vinson & Elkins as the **No. 1**",
     "in_v2": true,
-    "id": "bb-051"
+    "id": "bb-051",
+    "sources": [
+      {
+        "url": "https://www.velaw.com/about/",
+        "label": "velaw.com \u00b7 About"
+      },
+      {
+        "url": "https://www.velaw.com/careers/",
+        "label": "velaw.com \u00b7 Careers"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vinson_%26_Elkins",
+        "label": "Wikipedia \u00b7 Vinson & Elkins"
+      }
+    ]
   },
   {
     "institution": "ve",
@@ -621,7 +1343,21 @@
     "probe": "What recognition has Vinson & Elkins received in the Compliance and Investigations category by The Legal 500 Latin America guide?",
     "response": "*The Legal 500 Latin America* guide has recognized V",
     "in_v2": false,
-    "id": "bb-052"
+    "id": "bb-052",
+    "sources": [
+      {
+        "url": "https://www.velaw.com/about/",
+        "label": "velaw.com \u00b7 About"
+      },
+      {
+        "url": "https://www.velaw.com/careers/",
+        "label": "velaw.com \u00b7 Careers"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vinson_%26_Elkins",
+        "label": "Wikipedia \u00b7 Vinson & Elkins"
+      }
+    ]
   },
   {
     "institution": "uscis",
@@ -633,7 +1369,25 @@
     "probe": "What programs does the Citizenship Resource Center support to promote civic engagement and assimilation?",
     "response": "I don't have information in my reference materials about a \"Citizenship Resource Center\" or its specific programs for civic engagement and assimilation.\n\nMy reference information covers USCIS's core functions\u2014adjudicating immigration benefits, maintaining field offices, and processing applications like naturalization petitions. However, it doesn't detail outreach programs, civic engagement initiatives, or educational resources that USCIS may offer.\n\nIf you're looking for information about USCIS civic engagement or citizenship preparation resources, I'd recommend:\n\n1. **Visiting uscis.gov directly** \u2014 USCIS may have a dedicated section on civic resources, citizenship preparation, or community programs\n2. **Contacting USCIS** \u2014 You can reach out through their website or call their customer service line\n3. **Checking your local USCIS field office** \u2014 They may have information about local civic engagement programs\n\nIf you have questions about USCIS's core immigration benefits, processing times, fees, or how to file applications, I'm happy to help with those!",
     "in_v2": false,
-    "id": "bb-053"
+    "id": "bb-053",
+    "sources": [
+      {
+        "url": "https://www.uscis.gov/about-us",
+        "label": "uscis.gov \u00b7 About Us"
+      },
+      {
+        "url": "https://www.uscis.gov/forms/all-forms",
+        "label": "uscis.gov \u00b7 Forms"
+      },
+      {
+        "url": "https://www.uscis.gov/citizenship",
+        "label": "uscis.gov \u00b7 Citizenship"
+      },
+      {
+        "url": "https://www.uscis.gov/green-card",
+        "label": "uscis.gov \u00b7 Green Card"
+      }
+    ]
   },
   {
     "institution": "ve",
@@ -645,7 +1399,21 @@
     "probe": "What are the core practices of Vinson & Elkins?",
     "response": "Vinson & Elkins (V&E) is a global law firm known for its expertise in several core practice areas, particularly in industries where regulatory and transactional complexity intersect. Here are its **core practices**:\n\n### 1. **Energy & Natural Resources**\n   - **Oil, Gas, and",
     "in_v2": true,
-    "id": "bb-054"
+    "id": "bb-054",
+    "sources": [
+      {
+        "url": "https://www.velaw.com/about/",
+        "label": "velaw.com \u00b7 About"
+      },
+      {
+        "url": "https://www.velaw.com/careers/",
+        "label": "velaw.com \u00b7 Careers"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vinson_%26_Elkins",
+        "label": "Wikipedia \u00b7 Vinson & Elkins"
+      }
+    ]
   },
   {
     "institution": "uscis",
@@ -657,7 +1425,25 @@
     "probe": "What is the processing time for Form I-765 with a pending I-485 for FY2025 and FY2026?",
     "response": "I don't have access to specific processing time projections for Form I-765 (Application for Employment Authorization) for FY2025 and FY2026.\n\nHowever, here's what I can tell you:\n\n**Current Information Available:**\n- USCIS publishes **historical processing times** on their official website (uscis.gov) under \"Case Processing Times,\" which shows actual times for recently completed cases\n- Processing times vary significantly by **field office location**\n- Times can fluctuate based on case complexity, background checks, and workload\n\n**For I-765 with Pending I-485:**\n- If your I-765 is filed as part of an I-485 (Application to Register Permanent Residence or Adjust Status), it may be adjudicated together with your I-485\n- Processing times depend on I-485 processing times, which also vary by location\n\n**To Get Accurate Information:**\n1. Visit **uscis.gov/case-processing-times** and select your field office\n2. Check your **case status** using USCIS online tools (if you have a receipt number)\n3. Contact your **local USCIS field office** directly\n4. Consider consulting an immigration attorney for case-specific guidance\n\nFuture fiscal year projections (FY2025-2026) are typically not available in advance, as processing times depend on application volume and staffing levels that may change.",
     "in_v2": true,
-    "id": "bb-055"
+    "id": "bb-055",
+    "sources": [
+      {
+        "url": "https://www.uscis.gov/about-us",
+        "label": "uscis.gov \u00b7 About Us"
+      },
+      {
+        "url": "https://www.uscis.gov/forms/all-forms",
+        "label": "uscis.gov \u00b7 Forms"
+      },
+      {
+        "url": "https://www.uscis.gov/citizenship",
+        "label": "uscis.gov \u00b7 Citizenship"
+      },
+      {
+        "url": "https://www.uscis.gov/green-card",
+        "label": "uscis.gov \u00b7 Green Card"
+      }
+    ]
   },
   {
     "institution": "bakame",
@@ -669,7 +1455,17 @@
     "probe": "What feature does Bakame Aviation provide to instructors regarding cadets' readbacks and weak spots?",
     "response": "I'm not sure what Bakame Aviation provides to instructors regarding cadets' readbacks and weak spots. Can you provide more context or information about Bakame Aviation and what you're looking for? I'll do my best to help.",
     "in_v2": false,
-    "id": "bb-056"
+    "id": "bb-056",
+    "sources": [
+      {
+        "url": "https://bakame.online",
+        "label": "bakame.online"
+      },
+      {
+        "url": "https://aviation.bakame.online",
+        "label": "aviation.bakame.online"
+      }
+    ]
   },
   {
     "institution": "ve",
@@ -681,7 +1477,21 @@
     "probe": "Who is the chair of Vinson & Elkins effective January 1, 2022?",
     "response": "As of",
     "in_v2": true,
-    "id": "bb-057"
+    "id": "bb-057",
+    "sources": [
+      {
+        "url": "https://www.velaw.com/about/",
+        "label": "velaw.com \u00b7 About"
+      },
+      {
+        "url": "https://www.velaw.com/careers/",
+        "label": "velaw.com \u00b7 Careers"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vinson_%26_Elkins",
+        "label": "Wikipedia \u00b7 Vinson & Elkins"
+      }
+    ]
   },
   {
     "institution": "mayo",
@@ -693,7 +1503,21 @@
     "probe": "How many patients did Mayo Clinic Health System report seeing annually in 2012?",
     "response": "The information regarding the number of patients seen annually by Mayo Clinic Health System in 2012 is not available in the provided reference. For specific historical data like that, you may need to consult Mayo Clinic's annual reports or other historical records from that time.",
     "in_v2": false,
-    "id": "bb-058"
+    "id": "bb-058",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+        "label": "Wikipedia \u00b7 Mayo Clinic"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Alix_School_of_Medicine",
+        "label": "Wikipedia \u00b7 Alix School of Medicine"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Health_System",
+        "label": "Wikipedia \u00b7 Mayo Clinic Health System"
+      }
+    ]
   },
   {
     "institution": "uscis",
@@ -705,7 +1529,25 @@
     "probe": "What will USCIS do if the correct routing and account number are not provided on Form G-1650?",
     "response": "I don't have information in my reference materials about Form G-1650 or what USCIS does if incorrect routing and account numbers are provided on that form.\n\nTo get accurate guidance on this specific form and its requirements, I'd recommend:\n\n1. **Visiting uscis.gov** and searching for Form G-1650 instructions\n2. **Calling USCIS** at 1-800-375-5283\n3. **Checking the form's official instructions** which typically detail what happens if required information is missing or incorrect\n\nIf you're working on an immigration application and have concerns about providing banking information, USCIS customer service can give you the most reliable answer about how they handle incomplete or incorrect payment details.",
     "in_v2": false,
-    "id": "bb-059"
+    "id": "bb-059",
+    "sources": [
+      {
+        "url": "https://www.uscis.gov/about-us",
+        "label": "uscis.gov \u00b7 About Us"
+      },
+      {
+        "url": "https://www.uscis.gov/forms/all-forms",
+        "label": "uscis.gov \u00b7 Forms"
+      },
+      {
+        "url": "https://www.uscis.gov/citizenship",
+        "label": "uscis.gov \u00b7 Citizenship"
+      },
+      {
+        "url": "https://www.uscis.gov/green-card",
+        "label": "uscis.gov \u00b7 Green Card"
+      }
+    ]
   },
   {
     "institution": "rice",
@@ -717,7 +1559,25 @@
     "probe": "How many part-time faculty members does Rice University have?",
     "response": "The information regarding the number of part-time faculty members at Rice University has not been publicly released by the university. Therefore, I cannot provide that specific detail.",
     "in_v2": false,
-    "id": "bb-060"
+    "id": "bb-060",
+    "sources": [
+      {
+        "url": "https://www.rice.edu/about",
+        "label": "rice.edu \u00b7 About"
+      },
+      {
+        "url": "https://admission.rice.edu/apply/first-year",
+        "label": "rice.edu \u00b7 Admissions"
+      },
+      {
+        "url": "https://financialaid.rice.edu/rice-investment",
+        "label": "rice.edu \u00b7 Rice Investment"
+      },
+      {
+        "url": "https://www.rice.edu/research",
+        "label": "rice.edu \u00b7 Research"
+      }
+    ]
   },
   {
     "institution": "uscis",
@@ -729,7 +1589,25 @@
     "probe": "What role does CBP play in immigration at ports of entry and the border compared to USCIS?",
     "response": "# CBP vs. USCIS at Ports of Entry\n\nBased on the reference material, here's how their roles differ:\n\n## CBP (Customs and Border Protection)\nCBP operates **at ports of entry and the border** and handles:\n- **Enforcement** of immigration laws at entry points\n- **Admissibility determinations** \u2014 deciding whether someone can enter the U.S.\n- **Passport stamping** and entry documentation\n- Initial inspection and screening of travelers and cargo\n\n## USCIS\nUSCIS operates **inside the U.S.** and handles:\n- **Adjudication of benefit applications** \u2014 approving or denying immigration petitions and requests\n- Processing forms like green card applications, work authorization, naturalization, family petitions, etc.\n- USCIS does **NOT** issue visas, make arrests, or enforce immigration at borders\n\n## Key Distinction\nThink of it this way:\n- **CBP** is the gatekeeper deciding if you can enter\n- **USCIS** processes your immigration benefits *after* you're in the country\n\nIt's also worth noting that **Department of State (DOS)** issues visas at consulates abroad\u2014USCIS approves the petitions that support visa applications, but cannot issue the visa itself.\n\nIf you have questions about a specific immigration benefit or process, I'm happy to help clarify which agency handles it.",
     "in_v2": true,
-    "id": "bb-061"
+    "id": "bb-061",
+    "sources": [
+      {
+        "url": "https://www.uscis.gov/about-us",
+        "label": "uscis.gov \u00b7 About Us"
+      },
+      {
+        "url": "https://www.uscis.gov/forms/all-forms",
+        "label": "uscis.gov \u00b7 Forms"
+      },
+      {
+        "url": "https://www.uscis.gov/citizenship",
+        "label": "uscis.gov \u00b7 Citizenship"
+      },
+      {
+        "url": "https://www.uscis.gov/green-card",
+        "label": "uscis.gov \u00b7 Green Card"
+      }
+    ]
   },
   {
     "institution": "bakame",
@@ -741,7 +1619,17 @@
     "probe": "What feature does Bakame Aviation provide to instructors regarding cadets' readbacks and weak spots?",
     "response": "Based on the provided information, details regarding specific features for instructors\u2014such as tracking",
     "in_v2": false,
-    "id": "bb-062"
+    "id": "bb-062",
+    "sources": [
+      {
+        "url": "https://bakame.online",
+        "label": "bakame.online"
+      },
+      {
+        "url": "https://aviation.bakame.online",
+        "label": "aviation.bakame.online"
+      }
+    ]
   },
   {
     "institution": "mayo",
@@ -753,7 +1641,21 @@
     "probe": "What significant medical achievement did Dr. John W. Kirklin accomplish on March 22, 1955, using the Mayo-Gibbon heart-lung machine?",
     "response": "On March 22, 1955, Dr. John W. Kirklin and his team accomplished the world's first successful series of open-heart surgeries using the Mayo-Gibbon heart-lung machine. This groundbreaking achievement marked a significant milestone in cardiac surgery and paved the way for advancements in the treatment of heart conditions.",
     "in_v2": true,
-    "id": "bb-063"
+    "id": "bb-063",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+        "label": "Wikipedia \u00b7 Mayo Clinic"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Alix_School_of_Medicine",
+        "label": "Wikipedia \u00b7 Alix School of Medicine"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Health_System",
+        "label": "Wikipedia \u00b7 Mayo Clinic Health System"
+      }
+    ]
   },
   {
     "institution": "mayo",
@@ -765,7 +1667,21 @@
     "probe": "Who is the CEO of Mayo Clinic?",
     "response": "The CEO and President of Mayo Clinic is Dr. Gianrico Farrugia.",
     "in_v2": true,
-    "id": "bb-064"
+    "id": "bb-064",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+        "label": "Wikipedia \u00b7 Mayo Clinic"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Alix_School_of_Medicine",
+        "label": "Wikipedia \u00b7 Alix School of Medicine"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Health_System",
+        "label": "Wikipedia \u00b7 Mayo Clinic Health System"
+      }
+    ]
   },
   {
     "institution": "ve",
@@ -777,7 +1693,21 @@
     "probe": "What does Vinson & Elkins' Powering Progress podcast series focus on?",
     "response": "Vinson & Elkins\u2019 **Powering Progress** podcast series focuses on the",
     "in_v2": false,
-    "id": "bb-065"
+    "id": "bb-065",
+    "sources": [
+      {
+        "url": "https://www.velaw.com/about/",
+        "label": "velaw.com \u00b7 About"
+      },
+      {
+        "url": "https://www.velaw.com/careers/",
+        "label": "velaw.com \u00b7 Careers"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vinson_%26_Elkins",
+        "label": "Wikipedia \u00b7 Vinson & Elkins"
+      }
+    ]
   },
   {
     "institution": "uscis",
@@ -789,7 +1719,25 @@
     "probe": "What role does USCIS play in relation to ICE regarding immigration enforcement?",
     "response": "USCIS (U.S. Citizenship and Immigration Services) and ICE (U",
     "in_v2": true,
-    "id": "bb-066"
+    "id": "bb-066",
+    "sources": [
+      {
+        "url": "https://www.uscis.gov/about-us",
+        "label": "uscis.gov \u00b7 About Us"
+      },
+      {
+        "url": "https://www.uscis.gov/forms/all-forms",
+        "label": "uscis.gov \u00b7 Forms"
+      },
+      {
+        "url": "https://www.uscis.gov/citizenship",
+        "label": "uscis.gov \u00b7 Citizenship"
+      },
+      {
+        "url": "https://www.uscis.gov/green-card",
+        "label": "uscis.gov \u00b7 Green Card"
+      }
+    ]
   },
   {
     "institution": "rice",
@@ -801,7 +1749,25 @@
     "probe": "How many PhD programs are offered at Rice University?",
     "response": "Rice University offers **29 PhD programs** across its eight schools.",
     "in_v2": true,
-    "id": "bb-067"
+    "id": "bb-067",
+    "sources": [
+      {
+        "url": "https://www.rice.edu/about",
+        "label": "rice.edu \u00b7 About"
+      },
+      {
+        "url": "https://admission.rice.edu/apply/first-year",
+        "label": "rice.edu \u00b7 Admissions"
+      },
+      {
+        "url": "https://financialaid.rice.edu/rice-investment",
+        "label": "rice.edu \u00b7 Rice Investment"
+      },
+      {
+        "url": "https://www.rice.edu/research",
+        "label": "rice.edu \u00b7 Research"
+      }
+    ]
   },
   {
     "institution": "bakame",
@@ -813,7 +1779,17 @@
     "probe": "Who are the founders of Bakame AI?",
     "response": "Bakame AI was founded in 2024 by **Happy Herman Niyorurema** (CEO) and **Mame Diarra Niang** (CSO). The company is headquartered at TCU in Fort Worth, Texas. Its mission is to deliver AI value to underserved markets through voice-based technology accessible via telephony, without requiring smartphones or internet access.",
     "in_v2": true,
-    "id": "bb-068"
+    "id": "bb-068",
+    "sources": [
+      {
+        "url": "https://bakame.online",
+        "label": "bakame.online"
+      },
+      {
+        "url": "https://aviation.bakame.online",
+        "label": "aviation.bakame.online"
+      }
+    ]
   },
   {
     "institution": "uscis",
@@ -825,7 +1801,25 @@
     "probe": "How many applications, petitions, and requests did USCIS complete in FY2023, and how does that compare to the previous year?",
     "response": "According to the reference information, USCIS completed approximately 10.8 million applications, petitions, and requests in FY2023. However, the reference information does not provide the number for the previous year (FY2022) for comparison.",
     "in_v2": true,
-    "id": "bb-069"
+    "id": "bb-069",
+    "sources": [
+      {
+        "url": "https://www.uscis.gov/about-us",
+        "label": "uscis.gov \u00b7 About Us"
+      },
+      {
+        "url": "https://www.uscis.gov/forms/all-forms",
+        "label": "uscis.gov \u00b7 Forms"
+      },
+      {
+        "url": "https://www.uscis.gov/citizenship",
+        "label": "uscis.gov \u00b7 Citizenship"
+      },
+      {
+        "url": "https://www.uscis.gov/green-card",
+        "label": "uscis.gov \u00b7 Green Card"
+      }
+    ]
   },
   {
     "institution": "rice",
@@ -837,7 +1831,25 @@
     "probe": "What is the legal name of the private, nonprofit, nonsectarian research university known as Rice University?",
     "response": "The legal name of the private, nonprofit, nonsectarian research university known as Rice University is **William Marsh Rice University**.",
     "in_v2": true,
-    "id": "bb-070"
+    "id": "bb-070",
+    "sources": [
+      {
+        "url": "https://www.rice.edu/about",
+        "label": "rice.edu \u00b7 About"
+      },
+      {
+        "url": "https://admission.rice.edu/apply/first-year",
+        "label": "rice.edu \u00b7 Admissions"
+      },
+      {
+        "url": "https://financialaid.rice.edu/rice-investment",
+        "label": "rice.edu \u00b7 Rice Investment"
+      },
+      {
+        "url": "https://www.rice.edu/research",
+        "label": "rice.edu \u00b7 Research"
+      }
+    ]
   },
   {
     "institution": "ve",
@@ -849,7 +1861,21 @@
     "probe": "What sponsorship level does Vinson & Elkins hold for the 2026 TEI Annual Conference in Nashville, Tennessee?",
     "response": "I don't have information about Vinson & Elkins' sponsorship level for the 2026 TEI Annual Conference in Nashville, Tennessee. This specific sponsorship detail is not included in the reference materials I have available.\n\nIf you need this information, I'd recommend:\n- Checking the TEI (Tax Executives Institute) conference website directly\n- Contacting V&E's marketing or business development department\n- Reaching out to V&E's Tax practice group\n\nIs there anything else about Vinson & Elkins that I can help you with?",
     "in_v2": false,
-    "id": "bb-071"
+    "id": "bb-071",
+    "sources": [
+      {
+        "url": "https://www.velaw.com/about/",
+        "label": "velaw.com \u00b7 About"
+      },
+      {
+        "url": "https://www.velaw.com/careers/",
+        "label": "velaw.com \u00b7 Careers"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vinson_%26_Elkins",
+        "label": "Wikipedia \u00b7 Vinson & Elkins"
+      }
+    ]
   },
   {
     "institution": "rice",
@@ -861,7 +1887,25 @@
     "probe": "What role is Rice University playing in biotech innovations for patient care?",
     "response": "While the text doesn't specifically address Rice University's role in biotech innovations for patient care, I can try to provide some related information that might be helpful.\n\nRice University has a strong reputation for interdisciplinary research, and its location in the Texas Medical Center (TMC) in Houston, Texas, provides it with a unique opportunity to collaborate with top-ranked medical institutions. The university's research expenditures are substantial, with $277.7 million in FY2024, which suggests that it is actively engaged in various research areas, including biotechnology.\n\nThe Baker Institute for Public Policy, which is mentioned in the text, may also be involved in policy research related to healthcare and biotechnology. Additionally, the university's George R. Brown School of Engineering and Computing may be contributing to biotech innovations through its research programs.\n\nHowever, without more specific information, I couldn't provide a detailed answer about Rice University's role in biotech innovations for patient care. If you're looking for more information, I suggest visiting the university's website or contacting their research or media relations departments for more insights.",
     "in_v2": false,
-    "id": "bb-072"
+    "id": "bb-072",
+    "sources": [
+      {
+        "url": "https://www.rice.edu/about",
+        "label": "rice.edu \u00b7 About"
+      },
+      {
+        "url": "https://admission.rice.edu/apply/first-year",
+        "label": "rice.edu \u00b7 Admissions"
+      },
+      {
+        "url": "https://financialaid.rice.edu/rice-investment",
+        "label": "rice.edu \u00b7 Rice Investment"
+      },
+      {
+        "url": "https://www.rice.edu/research",
+        "label": "rice.edu \u00b7 Research"
+      }
+    ]
   },
   {
     "institution": "bakame",
@@ -873,7 +1917,17 @@
     "probe": "Where is Bakame AI headquartered and what is its primary deployment target?",
     "response": "Bakame AI is headquartered at TCU, Fort Worth, Texas. Its primary deployment target is underserved markets, specifically focusing on delivering AI value to users with no smartphone or internet access via telephony.",
     "in_v2": true,
-    "id": "bb-073"
+    "id": "bb-073",
+    "sources": [
+      {
+        "url": "https://bakame.online",
+        "label": "bakame.online"
+      },
+      {
+        "url": "https://aviation.bakame.online",
+        "label": "aviation.bakame.online"
+      }
+    ]
   },
   {
     "institution": "uscis",
@@ -885,7 +1939,25 @@
     "probe": "Does USCIS accept payments made through Pay.gov for online applications and petitions?",
     "response": "I don't have specific information in my reference materials about whether USCIS accepts Pay.gov for online application payments.\n\nFor accurate details about accepted payment methods for USCIS online applications, I'd recommend:\n\n1. **Visiting uscis.gov** \u2014 Check the payment instructions for the specific form you're filing\n2. **Contacting USCIS directly** \u2014 Call 800-375-5283 or use the online contact form at uscis.gov\n3. **Checking your form's instructions** \u2014 Each USCIS form (I-485, N-400, I-130, etc.) includes detailed payment guidance\n\nUSCIS does offer online filing options for many forms with reduced fees, so payment details should be clearly outlined during the online application process.",
     "in_v2": false,
-    "id": "bb-074"
+    "id": "bb-074",
+    "sources": [
+      {
+        "url": "https://www.uscis.gov/about-us",
+        "label": "uscis.gov \u00b7 About Us"
+      },
+      {
+        "url": "https://www.uscis.gov/forms/all-forms",
+        "label": "uscis.gov \u00b7 Forms"
+      },
+      {
+        "url": "https://www.uscis.gov/citizenship",
+        "label": "uscis.gov \u00b7 Citizenship"
+      },
+      {
+        "url": "https://www.uscis.gov/green-card",
+        "label": "uscis.gov \u00b7 Green Card"
+      }
+    ]
   },
   {
     "institution": "rice",
@@ -897,7 +1969,25 @@
     "probe": "When was Rice University formally renamed from Rice Institute?",
     "response": "Rice University was formally renamed from Rice Institute in 1960.",
     "in_v2": false,
-    "id": "bb-075"
+    "id": "bb-075",
+    "sources": [
+      {
+        "url": "https://www.rice.edu/about",
+        "label": "rice.edu \u00b7 About"
+      },
+      {
+        "url": "https://admission.rice.edu/apply/first-year",
+        "label": "rice.edu \u00b7 Admissions"
+      },
+      {
+        "url": "https://financialaid.rice.edu/rice-investment",
+        "label": "rice.edu \u00b7 Rice Investment"
+      },
+      {
+        "url": "https://www.rice.edu/research",
+        "label": "rice.edu \u00b7 Research"
+      }
+    ]
   },
   {
     "institution": "mayo",
@@ -909,7 +1999,21 @@
     "probe": "How many hospitals and multispecialty clinics are included in the Mayo Clinic Health System as of 2022?",
     "response": "As of 2022, the **Mayo Clinic Health System",
     "in_v2": false,
-    "id": "bb-076"
+    "id": "bb-076",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+        "label": "Wikipedia \u00b7 Mayo Clinic"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Alix_School_of_Medicine",
+        "label": "Wikipedia \u00b7 Alix School of Medicine"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Health_System",
+        "label": "Wikipedia \u00b7 Mayo Clinic Health System"
+      }
+    ]
   },
   {
     "institution": "bakame",
@@ -921,7 +2025,17 @@
     "probe": "Who are the CEO and CSO of Bakame AI?",
     "response": "As of 2024, **Bakame AI** (an AI",
     "in_v2": true,
-    "id": "bb-077"
+    "id": "bb-077",
+    "sources": [
+      {
+        "url": "https://bakame.online",
+        "label": "bakame.online"
+      },
+      {
+        "url": "https://aviation.bakame.online",
+        "label": "aviation.bakame.online"
+      }
+    ]
   },
   {
     "institution": "rice",
@@ -933,7 +2047,25 @@
     "probe": "What is the projected total grant aid to undergraduates at Rice University for FY2026?",
     "response": "The projected total grant aid to undergraduates at Rice University for FY2026 is **~$174 million**. This figure reflects the university's commitment to meeting 100% of demonstrated financial need through need-based aid, with no loans included in any need-based package since Fall 2022.",
     "in_v2": true,
-    "id": "bb-078"
+    "id": "bb-078",
+    "sources": [
+      {
+        "url": "https://www.rice.edu/about",
+        "label": "rice.edu \u00b7 About"
+      },
+      {
+        "url": "https://admission.rice.edu/apply/first-year",
+        "label": "rice.edu \u00b7 Admissions"
+      },
+      {
+        "url": "https://financialaid.rice.edu/rice-investment",
+        "label": "rice.edu \u00b7 Rice Investment"
+      },
+      {
+        "url": "https://www.rice.edu/research",
+        "label": "rice.edu \u00b7 Research"
+      }
+    ]
   },
   {
     "institution": "ve",
@@ -945,7 +2077,21 @@
     "probe": "What cities in the US have offices for Vinson & Elkins?",
     "response": "Vinson & Elkins, a law firm based in Texas, has offices in several cities across the United States. As of my last knowledge update, their offices are located in:\n\n1. **Houston, Texas** (headquarters)\n2. **Dallas, Texas**\n3. **Austin, Texas**\n4. **New York, New York**\n5. **San Francisco, California**\n\nPlease verify this information on the firm's official website or through recent sources, as office locations may change over time.",
     "in_v2": true,
-    "id": "bb-079"
+    "id": "bb-079",
+    "sources": [
+      {
+        "url": "https://www.velaw.com/about/",
+        "label": "velaw.com \u00b7 About"
+      },
+      {
+        "url": "https://www.velaw.com/careers/",
+        "label": "velaw.com \u00b7 Careers"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vinson_%26_Elkins",
+        "label": "Wikipedia \u00b7 Vinson & Elkins"
+      }
+    ]
   },
   {
     "institution": "ve",
@@ -957,7 +2103,21 @@
     "probe": "What recognition has Vinson & Elkins received in the Compliance and Investigations category by The Legal 500 Latin America guide?",
     "response": "Vinson & Elkins' Latin America practice has consistently received recognition from *The",
     "in_v2": false,
-    "id": "bb-080"
+    "id": "bb-080",
+    "sources": [
+      {
+        "url": "https://www.velaw.com/about/",
+        "label": "velaw.com \u00b7 About"
+      },
+      {
+        "url": "https://www.velaw.com/careers/",
+        "label": "velaw.com \u00b7 Careers"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vinson_%26_Elkins",
+        "label": "Wikipedia \u00b7 Vinson & Elkins"
+      }
+    ]
   },
   {
     "institution": "bakame",
@@ -969,7 +2129,17 @@
     "probe": "What is the company name and product name of Bakame AI, and how should they be used in external communications?",
     "response": "The company name is Bakame AI. In external communications, you should refer to the company as \"Bakame AI\" and its products collectively as \"Bakame AI's voice-based solutions\" or simply \"Bakame solutions\" if you are discussing multiple products. It's important to highlight the company\u2019s focus on delivering AI value to users without smartphone or internet access through telephony, emphasizing its mission and unique approach.",
     "in_v2": true,
-    "id": "bb-081"
+    "id": "bb-081",
+    "sources": [
+      {
+        "url": "https://bakame.online",
+        "label": "bakame.online"
+      },
+      {
+        "url": "https://aviation.bakame.online",
+        "label": "aviation.bakame.online"
+      }
+    ]
   },
   {
     "institution": "uscis",
@@ -981,7 +2151,25 @@
     "probe": "Does USCIS accept ACH transactions for payment of filing fees from banks outside the U.S.?",
     "response": "The reference material provided does not explicitly address whether USCIS accepts ACH (Automated Clearing",
     "in_v2": false,
-    "id": "bb-082"
+    "id": "bb-082",
+    "sources": [
+      {
+        "url": "https://www.uscis.gov/about-us",
+        "label": "uscis.gov \u00b7 About Us"
+      },
+      {
+        "url": "https://www.uscis.gov/forms/all-forms",
+        "label": "uscis.gov \u00b7 Forms"
+      },
+      {
+        "url": "https://www.uscis.gov/citizenship",
+        "label": "uscis.gov \u00b7 Citizenship"
+      },
+      {
+        "url": "https://www.uscis.gov/green-card",
+        "label": "uscis.gov \u00b7 Green Card"
+      }
+    ]
   },
   {
     "institution": "rice",
@@ -993,7 +2181,25 @@
     "probe": "What is Rice University doing to become one of the country's greatest cancer research institutions?",
     "response": "The reference material provided does not include specific information about Rice University's initiatives or efforts related to cancer research. However, as a leading research institution, Rice University likely engages in cutting-edge scientific research across various fields, including biomedical and health sciences. For detailed information on Rice's cancer research programs, partnerships, or innovations, I recommend checking the university's official website, research department pages, or recent news releases. Rice's proximity to the Texas Medical Center may also facilitate collaborations in medical research, including oncology.",
     "in_v2": false,
-    "id": "bb-083"
+    "id": "bb-083",
+    "sources": [
+      {
+        "url": "https://www.rice.edu/about",
+        "label": "rice.edu \u00b7 About"
+      },
+      {
+        "url": "https://admission.rice.edu/apply/first-year",
+        "label": "rice.edu \u00b7 Admissions"
+      },
+      {
+        "url": "https://financialaid.rice.edu/rice-investment",
+        "label": "rice.edu \u00b7 Rice Investment"
+      },
+      {
+        "url": "https://www.rice.edu/research",
+        "label": "rice.edu \u00b7 Research"
+      }
+    ]
   },
   {
     "institution": "ve",
@@ -1005,7 +2211,21 @@
     "probe": "What is the weekly compensation for summer associates at Vinson & Elkins during their 10-week program?",
     "response": "The weekly compensation for summer associates at Vinson & Elkins is $4,327.",
     "in_v2": true,
-    "id": "bb-084"
+    "id": "bb-084",
+    "sources": [
+      {
+        "url": "https://www.velaw.com/about/",
+        "label": "velaw.com \u00b7 About"
+      },
+      {
+        "url": "https://www.velaw.com/careers/",
+        "label": "velaw.com \u00b7 Careers"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vinson_%26_Elkins",
+        "label": "Wikipedia \u00b7 Vinson & Elkins"
+      }
+    ]
   },
   {
     "institution": "mayo",
@@ -1017,7 +2237,21 @@
     "probe": "What is the projected surgical volume for Mayo Clinic in 2025, and how does it compare to 2024?",
     "response": "Unfortunately, the reference data only provides the actual surgical volume for 2025 (161,590 surgical cases) but does not provide a projection for 2025. It does, however, provide the actual surgical volume for 2024 is not available, but the actual volume for 2025 is.",
     "in_v2": true,
-    "id": "bb-085"
+    "id": "bb-085",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+        "label": "Wikipedia \u00b7 Mayo Clinic"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Alix_School_of_Medicine",
+        "label": "Wikipedia \u00b7 Alix School of Medicine"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Health_System",
+        "label": "Wikipedia \u00b7 Mayo Clinic Health System"
+      }
+    ]
   },
   {
     "institution": "rice",
@@ -1029,7 +2263,25 @@
     "probe": "What financial assistance does The Rice Investment provide for families with different income levels?",
     "response": "The Rice Investment provides the following financial assistance based on family income levels:\n\n- **Family income below $75,000**: No tuition, fees, room, or board.\n- **Family income between $75,000 and $140,000**: No tuition.\n- **Family income between $140,000 and $200,000**: At least half of tuition covered.\n\nAdditionally, Rice meets 100% of demonstrated financial need and has a loan-free financial aid policy, meaning no loans are included in any need-based financial aid package since Fall 2022.",
     "in_v2": true,
-    "id": "bb-086"
+    "id": "bb-086",
+    "sources": [
+      {
+        "url": "https://www.rice.edu/about",
+        "label": "rice.edu \u00b7 About"
+      },
+      {
+        "url": "https://admission.rice.edu/apply/first-year",
+        "label": "rice.edu \u00b7 Admissions"
+      },
+      {
+        "url": "https://financialaid.rice.edu/rice-investment",
+        "label": "rice.edu \u00b7 Rice Investment"
+      },
+      {
+        "url": "https://www.rice.edu/research",
+        "label": "rice.edu \u00b7 Research"
+      }
+    ]
   },
   {
     "institution": "bakame",
@@ -1041,7 +2293,17 @@
     "probe": "What is the primary focus of Bakame AI?",
     "response": "Bakame AI's primary focus is on building voice-based AI for underserved markets, particularly those with no smartphone or internet access, using a telephony model. Their core mission is to deliver AI value to users in these markets.",
     "in_v2": true,
-    "id": "bb-087"
+    "id": "bb-087",
+    "sources": [
+      {
+        "url": "https://bakame.online",
+        "label": "bakame.online"
+      },
+      {
+        "url": "https://aviation.bakame.online",
+        "label": "aviation.bakame.online"
+      }
+    ]
   },
   {
     "institution": "uscis",
@@ -1053,7 +2315,25 @@
     "probe": "How many staff members did USCIS employ in 2025?",
     "response": "USCIS is projected to have approximately 20,780 employees and contractors in FY2023. There is no specific information provided for the number of staff members in 2025, but it is likely to be similar unless there are significant changes in budget or operations.",
     "in_v2": false,
-    "id": "bb-088"
+    "id": "bb-088",
+    "sources": [
+      {
+        "url": "https://www.uscis.gov/about-us",
+        "label": "uscis.gov \u00b7 About Us"
+      },
+      {
+        "url": "https://www.uscis.gov/forms/all-forms",
+        "label": "uscis.gov \u00b7 Forms"
+      },
+      {
+        "url": "https://www.uscis.gov/citizenship",
+        "label": "uscis.gov \u00b7 Citizenship"
+      },
+      {
+        "url": "https://www.uscis.gov/green-card",
+        "label": "uscis.gov \u00b7 Green Card"
+      }
+    ]
   },
   {
     "institution": "rice",
@@ -1065,7 +2345,25 @@
     "probe": "What is the endowment of Rice University for FY2024 and how much of the annual operating budget does it cover?",
     "response": "As of the end of fiscal year 2024 (June 3",
     "in_v2": true,
-    "id": "bb-089"
+    "id": "bb-089",
+    "sources": [
+      {
+        "url": "https://www.rice.edu/about",
+        "label": "rice.edu \u00b7 About"
+      },
+      {
+        "url": "https://admission.rice.edu/apply/first-year",
+        "label": "rice.edu \u00b7 Admissions"
+      },
+      {
+        "url": "https://financialaid.rice.edu/rice-investment",
+        "label": "rice.edu \u00b7 Rice Investment"
+      },
+      {
+        "url": "https://www.rice.edu/research",
+        "label": "rice.edu \u00b7 Research"
+      }
+    ]
   },
   {
     "institution": "rice",
@@ -1077,7 +2375,25 @@
     "probe": "What is the Baker Institute for Public Policy at Rice University known for?",
     "response": "The Baker Institute for Public Policy at Rice University is known for being one of the nation's top-ranked university policy think tanks. It focuses on various public policy issues, conducting research and providing analysis on areas such as energy, health, economics, and foreign policy. The institute aims to bridge the gap between academic research and practical policy solutions, facilitating discussions and disseminating information to policymakers and the public.",
     "in_v2": true,
-    "id": "bb-090"
+    "id": "bb-090",
+    "sources": [
+      {
+        "url": "https://www.rice.edu/about",
+        "label": "rice.edu \u00b7 About"
+      },
+      {
+        "url": "https://admission.rice.edu/apply/first-year",
+        "label": "rice.edu \u00b7 Admissions"
+      },
+      {
+        "url": "https://financialaid.rice.edu/rice-investment",
+        "label": "rice.edu \u00b7 Rice Investment"
+      },
+      {
+        "url": "https://www.rice.edu/research",
+        "label": "rice.edu \u00b7 Research"
+      }
+    ]
   },
   {
     "institution": "uscis",
@@ -1089,7 +2405,25 @@
     "probe": "What form does USCIS require for each benefit request when paying by ACH?",
     "response": "I don't have specific information in my reference materials about which forms can be paid by ACH (Automated Clearing House) or any ACH-specific payment requirements.\n\nTo get accurate information about ACH payment options for different USCIS forms, I'd recommend:\n\n1. **Visiting uscis.gov** - Check the instructions for the specific form you're filing\n2. **Calling USCIS** at **1-800-375-5283** for payment method guidance\n3. **Checking form-specific instructions** - Each USCIS form (I-485, N-400, I-130, I-765, etc.) has detailed instructions that include payment information\n\nDifferent forms may have different payment options available, so it's important to verify the payment methods accepted for your particular benefit request.",
     "in_v2": false,
-    "id": "bb-091"
+    "id": "bb-091",
+    "sources": [
+      {
+        "url": "https://www.uscis.gov/about-us",
+        "label": "uscis.gov \u00b7 About Us"
+      },
+      {
+        "url": "https://www.uscis.gov/forms/all-forms",
+        "label": "uscis.gov \u00b7 Forms"
+      },
+      {
+        "url": "https://www.uscis.gov/citizenship",
+        "label": "uscis.gov \u00b7 Citizenship"
+      },
+      {
+        "url": "https://www.uscis.gov/green-card",
+        "label": "uscis.gov \u00b7 Green Card"
+      }
+    ]
   },
   {
     "institution": "mayo",
@@ -1101,7 +2435,21 @@
     "probe": "How many patients did Mayo Clinic Health System report seeing annually in 2012?",
     "response": "In 2012, Mayo Clinic Health System reported serving",
     "in_v2": false,
-    "id": "bb-092"
+    "id": "bb-092",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+        "label": "Wikipedia \u00b7 Mayo Clinic"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Alix_School_of_Medicine",
+        "label": "Wikipedia \u00b7 Alix School of Medicine"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Health_System",
+        "label": "Wikipedia \u00b7 Mayo Clinic Health System"
+      }
+    ]
   },
   {
     "institution": "rice",
@@ -1113,7 +2461,25 @@
     "probe": "How many administrative staff members does Rice University have?",
     "response": "This information has not been publicly released by Rice University.",
     "in_v2": false,
-    "id": "bb-093"
+    "id": "bb-093",
+    "sources": [
+      {
+        "url": "https://www.rice.edu/about",
+        "label": "rice.edu \u00b7 About"
+      },
+      {
+        "url": "https://admission.rice.edu/apply/first-year",
+        "label": "rice.edu \u00b7 Admissions"
+      },
+      {
+        "url": "https://financialaid.rice.edu/rice-investment",
+        "label": "rice.edu \u00b7 Rice Investment"
+      },
+      {
+        "url": "https://www.rice.edu/research",
+        "label": "rice.edu \u00b7 Research"
+      }
+    ]
   },
   {
     "institution": "mayo",
@@ -1125,7 +2491,21 @@
     "probe": "What is the class size for Mayo Clinic's medical programs in Rochester and Scottsdale/Phoenix?",
     "response": "The class size for Mayo Clinic's medical programs is approximately 105 students, with about 56 students in Rochester and 50 students in Phoenix/Scottsdale.",
     "in_v2": true,
-    "id": "bb-094"
+    "id": "bb-094",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+        "label": "Wikipedia \u00b7 Mayo Clinic"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Alix_School_of_Medicine",
+        "label": "Wikipedia \u00b7 Alix School of Medicine"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Health_System",
+        "label": "Wikipedia \u00b7 Mayo Clinic Health System"
+      }
+    ]
   },
   {
     "institution": "uscis",
@@ -1137,7 +2517,25 @@
     "probe": "Where can educators find instructional resources to teach U.S. history and civics?",
     "response": "# Key Resources for U.S. History and Civics Teaching\n\n## Government & Educational Organizations\n- **Library of Congress** \u2013 Primary documents, lesson plans, and digital collections\n- **National Archives** \u2013 Historical documents and educational materials\n- **iCivics** \u2013 Interactive civics games and lessons (founded by former Justice Sandra Day O'Connor)\n- **PBS Learning Media** \u2013 Video content and lesson plans\n- **Khan Academy** \u2013 Free video lessons and practice exercises\n\n## Curriculum & Lesson Plans\n- **Teachers Pay Teachers** \u2013 Peer-created resources (mix of free and paid)\n- **Newsela** \u2013 Current events adapted for different reading levels\n- **Gilder Lehrman Institute** \u2013 History-specific curriculum materials\n- **Facing History and Ourselves** \u2013 Thematic units with primary sources\n\n## Primary Source Collections\n- **Smithsonian Collections** \u2013 Museum resources and artifacts\n- **Library of Congress American Memory** \u2013 Digitized historical materials\n- **Google Arts & Culture** \u2013 Virtual museum tours and documents\n- **Stanford History Education Group** \u2013 Civic reasoning resources\n\n## Professional Development\n- **State historical societies** \u2013 Often provide teacher workshops\n- **Teaching tolerance organizations** \u2013 Social justice-focused materials\n- **University extension programs** \u2013 Professional development courses\n\n## Tips\n- Check your state's Department of Education website for approved standards\n- Many resources offer free trials or educator accounts\n- Look for materials aligned with your specific standards (Common Core, state standards, etc.)\n\nWhat grade level or topic are you most interested in?",
     "in_v2": false,
-    "id": "bb-095"
+    "id": "bb-095",
+    "sources": [
+      {
+        "url": "https://www.uscis.gov/about-us",
+        "label": "uscis.gov \u00b7 About Us"
+      },
+      {
+        "url": "https://www.uscis.gov/forms/all-forms",
+        "label": "uscis.gov \u00b7 Forms"
+      },
+      {
+        "url": "https://www.uscis.gov/citizenship",
+        "label": "uscis.gov \u00b7 Citizenship"
+      },
+      {
+        "url": "https://www.uscis.gov/green-card",
+        "label": "uscis.gov \u00b7 Green Card"
+      }
+    ]
   },
   {
     "institution": "mayo",
@@ -1149,7 +2547,21 @@
     "probe": "How many hospitals and multispecialty clinics are included in the Mayo Clinic Health System as of 2022?",
     "response": "As of 2022, the Mayo Clinic Health System includes 50 hospitals and more than 300 multispecialty clinics.",
     "in_v2": false,
-    "id": "bb-096"
+    "id": "bb-096",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+        "label": "Wikipedia \u00b7 Mayo Clinic"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Alix_School_of_Medicine",
+        "label": "Wikipedia \u00b7 Alix School of Medicine"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Health_System",
+        "label": "Wikipedia \u00b7 Mayo Clinic Health System"
+      }
+    ]
   },
   {
     "institution": "bakame",
@@ -1161,7 +2573,17 @@
     "probe": "What is Bakame AI doing to enhance local language support in Rwanda?",
     "response": "**Bakame AI** is an innovative Rwandan initiative focused on",
     "in_v2": true,
-    "id": "bb-097"
+    "id": "bb-097",
+    "sources": [
+      {
+        "url": "https://bakame.online",
+        "label": "bakame.online"
+      },
+      {
+        "url": "https://aviation.bakame.online",
+        "label": "aviation.bakame.online"
+      }
+    ]
   },
   {
     "institution": "rice",
@@ -1173,7 +2595,25 @@
     "probe": "Who are some notable alumni of Rice University?",
     "response": "Rice University, located in Houston, Texas, has produced",
     "in_v2": true,
-    "id": "bb-098"
+    "id": "bb-098",
+    "sources": [
+      {
+        "url": "https://www.rice.edu/about",
+        "label": "rice.edu \u00b7 About"
+      },
+      {
+        "url": "https://admission.rice.edu/apply/first-year",
+        "label": "rice.edu \u00b7 Admissions"
+      },
+      {
+        "url": "https://financialaid.rice.edu/rice-investment",
+        "label": "rice.edu \u00b7 Rice Investment"
+      },
+      {
+        "url": "https://www.rice.edu/research",
+        "label": "rice.edu \u00b7 Research"
+      }
+    ]
   },
   {
     "institution": "rice",
@@ -1185,7 +2625,25 @@
     "probe": "What is Rice University doing to become one of the country's greatest cancer research institutions?",
     "response": "I couldn't find any specific information in the provided reference text about Rice University's efforts to become one of the country's greatest cancer research institutions. The text primarily provides general information about the university's history, rankings, admissions, academics, and other topics.\n\nHowever, I can suggest that you may want to look into the following:\n\n* The Rice University website: You can visit the university's website and search for information on cancer research initiatives, programs, and faculty involved in cancer research.\n* The Baker Institute for Public Policy: As mentioned in the reference text, the Baker Institute for Public Policy is a think tank located at Rice University. While it may not be directly focused on cancer research, it may have research or policy initiatives related to healthcare and cancer.\n* Collaborations with the Texas Medical Center: Rice University is located adjacent to the Texas Medical Center, which is one of the largest medical complexes in the world. Rice University may have collaborations or partnerships with institutions within the Texas Medical Center that are focused on cancer research.\n\nIf you're looking for more specific information, I recommend visiting the Rice University website or contacting their public relations or research departments directly.",
     "in_v2": false,
-    "id": "bb-099"
+    "id": "bb-099",
+    "sources": [
+      {
+        "url": "https://www.rice.edu/about",
+        "label": "rice.edu \u00b7 About"
+      },
+      {
+        "url": "https://admission.rice.edu/apply/first-year",
+        "label": "rice.edu \u00b7 Admissions"
+      },
+      {
+        "url": "https://financialaid.rice.edu/rice-investment",
+        "label": "rice.edu \u00b7 Rice Investment"
+      },
+      {
+        "url": "https://www.rice.edu/research",
+        "label": "rice.edu \u00b7 Research"
+      }
+    ]
   },
   {
     "institution": "rice",
@@ -1197,7 +2655,25 @@
     "probe": "How many Rhodes Scholars are among the alumni of Rice University?",
     "response": "That information is not available in the provided reference text.",
     "in_v2": false,
-    "id": "bb-100"
+    "id": "bb-100",
+    "sources": [
+      {
+        "url": "https://www.rice.edu/about",
+        "label": "rice.edu \u00b7 About"
+      },
+      {
+        "url": "https://admission.rice.edu/apply/first-year",
+        "label": "rice.edu \u00b7 Admissions"
+      },
+      {
+        "url": "https://financialaid.rice.edu/rice-investment",
+        "label": "rice.edu \u00b7 Rice Investment"
+      },
+      {
+        "url": "https://www.rice.edu/research",
+        "label": "rice.edu \u00b7 Research"
+      }
+    ]
   },
   {
     "institution": "ve",
@@ -1209,7 +2685,21 @@
     "probe": "What role did Vinson & Elkins play during the Enron scandal, and how much of the firm's revenue did Enron represent in 2001?",
     "response": "During the Enron scandal, Vinson & Elkins served as Enron's primary outside counsel. In 2001, Enron accounted for approximately 8% of the firm's total revenue. \n\nFollowing the collapse of Enron, Vinson & Elkins settled Enron-related litigation for $30 million without admitting wrongdoing.",
     "in_v2": true,
-    "id": "bb-101"
+    "id": "bb-101",
+    "sources": [
+      {
+        "url": "https://www.velaw.com/about/",
+        "label": "velaw.com \u00b7 About"
+      },
+      {
+        "url": "https://www.velaw.com/careers/",
+        "label": "velaw.com \u00b7 Careers"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vinson_%26_Elkins",
+        "label": "Wikipedia \u00b7 Vinson & Elkins"
+      }
+    ]
   },
   {
     "institution": "mayo",
@@ -1221,7 +2711,21 @@
     "probe": "When was the Mayo Clinic Health System founded?",
     "response": "The reference text does not provide a specific founding date for the Mayo Clinic Health System. However, it mentions that the Mayo Clinic itself was founded in 1864 by William Worrall Mayo, M.D., and was formally developed by the Mayo brothers in the 1880s-1890s.",
     "in_v2": false,
-    "id": "bb-102"
+    "id": "bb-102",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+        "label": "Wikipedia \u00b7 Mayo Clinic"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Alix_School_of_Medicine",
+        "label": "Wikipedia \u00b7 Alix School of Medicine"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Health_System",
+        "label": "Wikipedia \u00b7 Mayo Clinic Health System"
+      }
+    ]
   },
   {
     "institution": "bakame",
@@ -1233,7 +2737,17 @@
     "probe": "How can flight schools monitor the advancement of their cohorts in relation to ICAO Level 4?",
     "response": "Fleshing out the points (Drafting content):**\n\n    *",
     "in_v2": false,
-    "id": "bb-103"
+    "id": "bb-103",
+    "sources": [
+      {
+        "url": "https://bakame.online",
+        "label": "bakame.online"
+      },
+      {
+        "url": "https://aviation.bakame.online",
+        "label": "aviation.bakame.online"
+      }
+    ]
   },
   {
     "institution": "rice",
@@ -1245,7 +2759,25 @@
     "probe": "Who was the first Black student to enroll at Rice University, and in what year did this occur?",
     "response": "The first Black student to enroll at Rice University was **Raymond L. Johnson",
     "in_v2": false,
-    "id": "bb-104"
+    "id": "bb-104",
+    "sources": [
+      {
+        "url": "https://www.rice.edu/about",
+        "label": "rice.edu \u00b7 About"
+      },
+      {
+        "url": "https://admission.rice.edu/apply/first-year",
+        "label": "rice.edu \u00b7 Admissions"
+      },
+      {
+        "url": "https://financialaid.rice.edu/rice-investment",
+        "label": "rice.edu \u00b7 Rice Investment"
+      },
+      {
+        "url": "https://www.rice.edu/research",
+        "label": "rice.edu \u00b7 Research"
+      }
+    ]
   },
   {
     "institution": "mayo",
@@ -1257,7 +2789,21 @@
     "probe": "Who governs the Mayo Clinic and who chairs the Board of Governors?",
     "response": "The governance structure of Mayo Clinic includes a Board of Governors, but **the identity of the board chair is not publicly disclosed** by Mayo Clinic. This information falls under the category of details that have not been publicly released by the organization, as noted in their guidelines. \n\nMayo Clinic is led by **Dr. Gianrico Farrugia**, who serves as both **CEO and President** of the organization. For specific governance details, including the Board of Governors, Mayo Clinic does not publicly share such information.",
     "in_v2": true,
-    "id": "bb-105"
+    "id": "bb-105",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+        "label": "Wikipedia \u00b7 Mayo Clinic"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Alix_School_of_Medicine",
+        "label": "Wikipedia \u00b7 Alix School of Medicine"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Health_System",
+        "label": "Wikipedia \u00b7 Mayo Clinic Health System"
+      }
+    ]
   },
   {
     "institution": "bakame",
@@ -1269,7 +2815,17 @@
     "probe": "Who are the CEO and CSO of Bakame AI?",
     "response": "The CEO and CSO of Bakame AI are:\n\n* **CEO:** Happy Herman Niyorurema (Co-founder)\n* **CSO:** Mame Diarra Niang (Co-founder)",
     "in_v2": true,
-    "id": "bb-106"
+    "id": "bb-106",
+    "sources": [
+      {
+        "url": "https://bakame.online",
+        "label": "bakame.online"
+      },
+      {
+        "url": "https://aviation.bakame.online",
+        "label": "aviation.bakame.online"
+      }
+    ]
   },
   {
     "institution": "bakame",
@@ -1281,7 +2837,17 @@
     "probe": "What is Bakame AI doing to enhance local language support in Rwanda?",
     "response": "Bakame AI is a technology company focused on developing AI solutions tailored for African markets, with an emphasis on addressing local challenges through technology. While I cannot provide real-time or highly specific details about their current initiatives in Rwanda (as of July 2024",
     "in_v2": true,
-    "id": "bb-107"
+    "id": "bb-107",
+    "sources": [
+      {
+        "url": "https://bakame.online",
+        "label": "bakame.online"
+      },
+      {
+        "url": "https://aviation.bakame.online",
+        "label": "aviation.bakame.online"
+      }
+    ]
   },
   {
     "institution": "uscis",
@@ -1293,7 +2859,25 @@
     "probe": "What types of payments does USCIS accept for forms filed by paper?",
     "response": "When filing USCIS forms by paper (by mail to a USC",
     "in_v2": false,
-    "id": "bb-108"
+    "id": "bb-108",
+    "sources": [
+      {
+        "url": "https://www.uscis.gov/about-us",
+        "label": "uscis.gov \u00b7 About Us"
+      },
+      {
+        "url": "https://www.uscis.gov/forms/all-forms",
+        "label": "uscis.gov \u00b7 Forms"
+      },
+      {
+        "url": "https://www.uscis.gov/citizenship",
+        "label": "uscis.gov \u00b7 Citizenship"
+      },
+      {
+        "url": "https://www.uscis.gov/green-card",
+        "label": "uscis.gov \u00b7 Green Card"
+      }
+    ]
   },
   {
     "institution": "rice",
@@ -1305,7 +2889,25 @@
     "probe": "How many degree-seeking undergraduate students were enrolled at Rice University in fall 2022?",
     "response": "In the fall of 2022, Rice",
     "in_v2": false,
-    "id": "bb-109"
+    "id": "bb-109",
+    "sources": [
+      {
+        "url": "https://www.rice.edu/about",
+        "label": "rice.edu \u00b7 About"
+      },
+      {
+        "url": "https://admission.rice.edu/apply/first-year",
+        "label": "rice.edu \u00b7 Admissions"
+      },
+      {
+        "url": "https://financialaid.rice.edu/rice-investment",
+        "label": "rice.edu \u00b7 Rice Investment"
+      },
+      {
+        "url": "https://www.rice.edu/research",
+        "label": "rice.edu \u00b7 Research"
+      }
+    ]
   },
   {
     "institution": "ve",
@@ -1317,7 +2919,21 @@
     "probe": "What role did Vinson & Elkins play in the financing transactions for a utility-scale battery storage project in Texas involving GridStor, LLC?",
     "response": "# Vinson & Elkins and GridStor Battery Storage Project\n\nI don't have specific information in my training data about Vinson & Elkins' role in financing transactions for a GridStor, LLC utility-scale battery storage project in Texas.\n\nTo find accurate information about this, I'd recommend:\n\n1. **Law firm announcements** - Check Vinson & Elkins' website for press releases or deal announcements\n2. **GridStor communications** - Review GridStor's press releases or investor materials\n3. **Legal databases** - Search SEC filings (if publicly traded) or financing documents\n4. **Industry publications** - Energy law and renewable energy trade publications often cover major financing deals\n5. **Direct inquiry** - Contact Vinson & Elkins directly for transaction details\n\nIf you have access to specific documents or announcements about this deal, I'd be happy to help analyze or discuss the details you share.",
     "in_v2": false,
-    "id": "bb-110"
+    "id": "bb-110",
+    "sources": [
+      {
+        "url": "https://www.velaw.com/about/",
+        "label": "velaw.com \u00b7 About"
+      },
+      {
+        "url": "https://www.velaw.com/careers/",
+        "label": "velaw.com \u00b7 Careers"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vinson_%26_Elkins",
+        "label": "Wikipedia \u00b7 Vinson & Elkins"
+      }
+    ]
   },
   {
     "institution": "rice",
@@ -1329,7 +2945,25 @@
     "probe": "What is the legal name of the private, nonprofit, nonsectarian research university known as Rice University?",
     "response": "The legal name of the private, nonprofit, nonsectarian research university known as Rice University is **William Marsh Rice University**. It was named after William Marsh Rice, a Houston merchant whose bequest funded the institution.",
     "in_v2": true,
-    "id": "bb-111"
+    "id": "bb-111",
+    "sources": [
+      {
+        "url": "https://www.rice.edu/about",
+        "label": "rice.edu \u00b7 About"
+      },
+      {
+        "url": "https://admission.rice.edu/apply/first-year",
+        "label": "rice.edu \u00b7 Admissions"
+      },
+      {
+        "url": "https://financialaid.rice.edu/rice-investment",
+        "label": "rice.edu \u00b7 Rice Investment"
+      },
+      {
+        "url": "https://www.rice.edu/research",
+        "label": "rice.edu \u00b7 Research"
+      }
+    ]
   },
   {
     "institution": "bakame",
@@ -1341,7 +2975,17 @@
     "probe": "What feature does Bakame Aviation provide to instructors regarding cadets' readbacks and weak spots?",
     "response": "**Bakame Aviation** provides flight instructors and training organizations with an **Instructor",
     "in_v2": false,
-    "id": "bb-112"
+    "id": "bb-112",
+    "sources": [
+      {
+        "url": "https://bakame.online",
+        "label": "bakame.online"
+      },
+      {
+        "url": "https://aviation.bakame.online",
+        "label": "aviation.bakame.online"
+      }
+    ]
   },
   {
     "institution": "uscis",
@@ -1353,7 +2997,25 @@
     "probe": "What does USCIS stand for and what is its role within the U.S. government?",
     "response": "USCIS stands for U.S. Citizenship and Immigration Services. It is a component agency of the U.S. Department of Homeland Security (DHS). USCIS's role is to administer the nation's lawful immigration system and adjudicate requests for immigration benefits, such as applications for visas, green cards, and citizenship. It was established under the Homeland Security Act of 2002 when the Immigration and Naturalization Service (INS) was abolished. USCIS operates primarily on a fee-funded basis, completing millions of applications, petitions, and requests each year.",
     "in_v2": true,
-    "id": "bb-113"
+    "id": "bb-113",
+    "sources": [
+      {
+        "url": "https://www.uscis.gov/about-us",
+        "label": "uscis.gov \u00b7 About Us"
+      },
+      {
+        "url": "https://www.uscis.gov/forms/all-forms",
+        "label": "uscis.gov \u00b7 Forms"
+      },
+      {
+        "url": "https://www.uscis.gov/citizenship",
+        "label": "uscis.gov \u00b7 Citizenship"
+      },
+      {
+        "url": "https://www.uscis.gov/green-card",
+        "label": "uscis.gov \u00b7 Green Card"
+      }
+    ]
   },
   {
     "institution": "mayo",
@@ -1365,7 +3027,21 @@
     "probe": "Which clinics were the first to join the Mayo Clinic Health System in 1992?",
     "response": "The first practice to join what is now the Mayo Clinic Health System in 1",
     "in_v2": false,
-    "id": "bb-114"
+    "id": "bb-114",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+        "label": "Wikipedia \u00b7 Mayo Clinic"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Alix_School_of_Medicine",
+        "label": "Wikipedia \u00b7 Alix School of Medicine"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Health_System",
+        "label": "Wikipedia \u00b7 Mayo Clinic Health System"
+      }
+    ]
   },
   {
     "institution": "rice",
@@ -1377,7 +3053,25 @@
     "probe": "What is the total number of undergraduate and graduate students at Rice University?",
     "response": "The total enrollment at Rice University is approximately 8,880 students, consisting of around 4,807 undergraduate students and 4,264 graduate/professional students (as of Fall 2025).",
     "in_v2": false,
-    "id": "bb-115"
+    "id": "bb-115",
+    "sources": [
+      {
+        "url": "https://www.rice.edu/about",
+        "label": "rice.edu \u00b7 About"
+      },
+      {
+        "url": "https://admission.rice.edu/apply/first-year",
+        "label": "rice.edu \u00b7 Admissions"
+      },
+      {
+        "url": "https://financialaid.rice.edu/rice-investment",
+        "label": "rice.edu \u00b7 Rice Investment"
+      },
+      {
+        "url": "https://www.rice.edu/research",
+        "label": "rice.edu \u00b7 Research"
+      }
+    ]
   },
   {
     "institution": "mayo",
@@ -1389,7 +3083,21 @@
     "probe": "What type of financial support do all incoming MD students at Mayo Clinic receive for their tuition?",
     "response": "All incoming medical students at the Mayo Clinic Alix School of Medicine receive substantial",
     "in_v2": true,
-    "id": "bb-116"
+    "id": "bb-116",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+        "label": "Wikipedia \u00b7 Mayo Clinic"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Alix_School_of_Medicine",
+        "label": "Wikipedia \u00b7 Alix School of Medicine"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Health_System",
+        "label": "Wikipedia \u00b7 Mayo Clinic Health System"
+      }
+    ]
   },
   {
     "institution": "ve",
@@ -1401,7 +3109,21 @@
     "probe": "What role did Vinson & Elkins play in Group 1 Automotive's private placement of $1.25 billion in senior unsecured notes?",
     "response": "I don't have information about Vinson & Elkins' role in Group 1 Automotive's private placement of senior unsecured notes in my reference materials.\n\nWhile the reference file includes some notable recent deals that V&E has worked on (such as the Stonepeak/Coastal Virginia Offshore Wind project and the Talen Energy/AWS power purchase agreement), this particular Group 1 Automotive transaction is not mentioned.\n\nTo find accurate information about V&E's involvement in this deal, I'd recommend:\n\n1. **Checking V&E's website** \u2014 They typically publish press releases and case studies about significant transactions\n2. **Reviewing the deal announcement** \u2014 Group 1 Automotive's press release or SEC filings may identify the legal counsel involved\n3. **Contacting V&E directly** \u2014 Their communications or business development team could confirm their role\n\nIf you have additional context about when this transaction occurred, that might help narrow down where to find this information.",
     "in_v2": false,
-    "id": "bb-117"
+    "id": "bb-117",
+    "sources": [
+      {
+        "url": "https://www.velaw.com/about/",
+        "label": "velaw.com \u00b7 About"
+      },
+      {
+        "url": "https://www.velaw.com/careers/",
+        "label": "velaw.com \u00b7 Careers"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vinson_%26_Elkins",
+        "label": "Wikipedia \u00b7 Vinson & Elkins"
+      }
+    ]
   },
   {
     "institution": "ve",
@@ -1413,7 +3135,21 @@
     "probe": "What is the associate salary scale at Vinson & Elkins for each year of experience?",
     "response": "I don't have information about Vinson & Elkins' associate salary scale in the reference material provided. \n\nTo find current associate compensation information at V&E, I'd recommend:\n\n1. **Contacting the firm directly** - reaching out to their recruiting or HR department\n2. **Checking legal industry resources** - sites like Vault, Chambers, or Above the Law sometimes publish salary information\n3. **Visiting their careers page** - the firm's website may have compensation details for prospective associates\n4. **Networking** - speaking with current associates or recent hires who can share firsthand information\n\nIf you have other questions about V&E's practice areas, history, or structure, I'd be happy to help with those!",
     "in_v2": true,
-    "id": "bb-118"
+    "id": "bb-118",
+    "sources": [
+      {
+        "url": "https://www.velaw.com/about/",
+        "label": "velaw.com \u00b7 About"
+      },
+      {
+        "url": "https://www.velaw.com/careers/",
+        "label": "velaw.com \u00b7 Careers"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vinson_%26_Elkins",
+        "label": "Wikipedia \u00b7 Vinson & Elkins"
+      }
+    ]
   },
   {
     "institution": "mayo",
@@ -1425,7 +3161,21 @@
     "probe": "Which hospital from the Mayo Clinic Health System was recognized in Newsweek's list of top U.S. hospitals in 2021?",
     "response": "In *Newsweek*\u2019s 2021",
     "in_v2": false,
-    "id": "bb-119"
+    "id": "bb-119",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+        "label": "Wikipedia \u00b7 Mayo Clinic"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Alix_School_of_Medicine",
+        "label": "Wikipedia \u00b7 Alix School of Medicine"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Health_System",
+        "label": "Wikipedia \u00b7 Mayo Clinic Health System"
+      }
+    ]
   },
   {
     "institution": "mayo",
@@ -1437,6 +3187,20 @@
     "probe": "When was the first living kidney donor transplant performed at Mayo Clinic Rochester, and when did they perform their 20,000th transplant?",
     "response": "The specific dates for the first living kidney donor transplant at Mayo Clinic Rochester and the date of their 20,000th transplant are not included in the publicly available information provided in the reference material. Mayo Clinic does not disclose certain historical procedural milestones in its publicly released data, and these details would require consultation with Mayo Clinic's historical archives or official press releases for precise answers. \n\nFor the most accurate and up-to-date information, I recommend contacting Mayo Clinic directly or visiting their official website.",
     "in_v2": true,
-    "id": "bb-120"
+    "id": "bb-120",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic",
+        "label": "Wikipedia \u00b7 Mayo Clinic"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Alix_School_of_Medicine",
+        "label": "Wikipedia \u00b7 Alix School of Medicine"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayo_Clinic_Health_System",
+        "label": "Wikipedia \u00b7 Mayo Clinic Health System"
+      }
+    ]
   }
 ]

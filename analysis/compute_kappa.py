@@ -39,11 +39,27 @@ if not rows:
     print("No ratings yet.")
     sys.exit(0)
 
-df = pd.DataFrame(rows)
-# Keep only non-SKIP ratings
-df = df[df["human_verdict"].isin(["A", "B", "C"])].copy()
-print(f"Loaded {len(df)} non-skip ratings from {df['grader_name'].nunique()} graders.")
-print(f"Graders: {sorted(df['grader_name'].unique())}")
+df_all = pd.DataFrame(rows)
+print(f"Loaded {len(df_all)} total ratings from {df_all['grader_name'].nunique()} graders.")
+print(f"Graders: {sorted(df_all['grader_name'].unique())}")
+
+# Ground-truth flag audit: how often did graders flag the ground truth as suspect?
+n_flag = (df_all["human_verdict"] == "FLAG").sum()
+n_skip = (df_all["human_verdict"] == "SKIP").sum()
+n_total = len(df_all)
+print(f"\nGround-truth flag rate: {n_flag}/{n_total} = {100*n_flag/n_total:.1f}%  (healthy: <5%)")
+print(f"Skip rate:              {n_skip}/{n_total} = {100*n_skip/n_total:.1f}%")
+
+flagged_ids = set(df_all[df_all["human_verdict"] == "FLAG"]["verdict_id"].unique())
+if flagged_ids:
+    print(f"\nFlagged verdict IDs (removed from kappa calc): {sorted(flagged_ids)[:10]}{'...' if len(flagged_ids)>10 else ''}")
+
+# For kappa: keep only A/B/C, exclude any item that any grader flagged
+df = df_all[
+    df_all["human_verdict"].isin(["A", "B", "C"])
+    & ~df_all["verdict_id"].isin(flagged_ids)
+].copy()
+print(f"\nRatings used for kappa (A/B/C, non-flagged items): {len(df)}")
 print()
 
 # Load the private sample with judge verdicts

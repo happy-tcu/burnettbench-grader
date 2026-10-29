@@ -9,7 +9,7 @@ create table if not exists public.ratings (
   institution text not null,
   model       text not null,
   condition   text not null,
-  human_verdict text not null check (human_verdict in ('A','B','C','SKIP')),
+  human_verdict text not null check (human_verdict in ('A','B','C','FLAG','SKIP')),
   rating_ms   integer,
   created_at  timestamptz not null default now()
 );

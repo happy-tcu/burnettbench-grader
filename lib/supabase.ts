@@ -12,6 +12,6 @@ export type Rating = {
   institution: string;
   model: string;
   condition: string;
-  human_verdict: "A" | "B" | "C" | "SKIP";
+  human_verdict: "A" | "B" | "C" | "FLAG" | "SKIP";
   rating_ms: number;
 };

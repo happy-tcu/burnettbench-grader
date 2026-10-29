@@ -4,6 +4,8 @@ import { useEffect, useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 
+type Source = { url: string; label: string };
+
 type Item = {
   id: string;
   institution: string;
@@ -15,6 +17,7 @@ type Item = {
   probe: string;
   response: string;
   in_v2: boolean;
+  sources: Source[];
 };
 
 const INST_LABEL: Record<string, string> = {
@@ -66,7 +69,7 @@ export default function Grade() {
   }, [idx]);
 
   const submit = useCallback(
-    async (verdict: "A" | "B" | "C" | "SKIP") => {
+    async (verdict: "A" | "B" | "C" | "FLAG" | "SKIP") => {
       if (!items || !grader) return;
       const item = items[idx];
       if (!item) return;
@@ -110,6 +113,7 @@ export default function Grade() {
       if (e.key === "a" || e.key === "A") submit("A");
       if (e.key === "b" || e.key === "B") submit("B");
       if (e.key === "c" || e.key === "C") submit("C");
+      if (e.key === "d" || e.key === "D") submit("FLAG");
       if (e.key === "s" || e.key === "S") submit("SKIP");
     };
     window.addEventListener("keydown", handler);
@@ -139,6 +143,16 @@ export default function Grade() {
       <div className="card">
         <div className="meta">GROUND-TRUTH FACT</div>
         <div className="fact-text">{item.fact}</div>
+        {item.sources && item.sources.length > 0 && (
+          <div className="sources">
+            <span className="sources-label">Verify at:</span>
+            {item.sources.map((s, i) => (
+              <a key={i} href={s.url} target="_blank" rel="noopener noreferrer">
+                {s.label}
+              </a>
+            ))}
+          </div>
+        )}
       </div>
 
       <div className="card">
@@ -163,6 +177,12 @@ export default function Grade() {
         <strong>Not addressed</strong> — the response hedges, declines, or does not actually answer the question.
       </button>
 
+      <button className="verdict-btn d" onClick={() => submit("FLAG")} disabled={submitting}>
+        <span className="kbd">D</span>
+        <strong>Flag ground truth</strong> — the stated fact looks wrong, unverifiable, or ambiguous.
+        Use this when you cannot judge the response because the fact itself is suspect.
+      </button>
+
       <div className="skip-row">
         <button onClick={() => submit("SKIP")} disabled={submitting}>
           Skip this one (S)
@@ -171,7 +191,7 @@ export default function Grade() {
 
       {error && <p className="error">{error}</p>}
 
-      <p className="footer">Keyboard: A / B / C / S · Progress saved automatically.</p>
+      <p className="footer">Keyboard: A / B / C / D / S · Progress saved automatically.</p>
     </main>
   );
 }

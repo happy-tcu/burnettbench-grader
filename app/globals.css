@@ -90,6 +90,21 @@ button.primary:hover { background: #333; }
 .verdict-btn.a { border-left: 3px solid var(--green); }
 .verdict-btn.b { border-left: 3px solid var(--red); }
 .verdict-btn.c { border-left: 3px solid var(--yellow); }
+.verdict-btn.d { border-left: 3px solid var(--muted); margin-top: 20px; }
+
+.sources {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-items: center;
+}
+.sources-label { color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.sources a { color: var(--accent); text-decoration: none; }
+.sources a:hover { text-decoration: underline; }
 
 .progress-bar {
   height: 4px;

@@ -25,10 +25,16 @@ export default function Home() {
         <div className="instructions">
           <p>
             You are helping validate an AI judge used in our empirical study of the <code>llms.txt</code> standard.
-            For each of ~120 items, you'll see a question, a model's answer, and the ground-truth fact. Your job
-            is to decide whether the model's answer is <strong>correct (A)</strong>,{" "}
-            <strong>confidently wrong (B)</strong>, or <strong>not addressed (C)</strong>.
+            For each of ~120 items, you'll see a <strong>question</strong>, the <strong>ground-truth fact</strong>{" "}
+            (the authoritative answer, scraped from Wikipedia or the institution's own website), and the{" "}
+            <strong>model's response</strong>. Your job is to compare the response to the fact and decide:
           </p>
+          <ul style={{ margin: "6px 0 8px 20px", fontSize: 13 }}>
+            <li><strong>A — Correct:</strong> response matches the fact.</li>
+            <li><strong>B — Confidently wrong:</strong> response contradicts the fact or fabricates a plausible wrong answer.</li>
+            <li><strong>C — Not addressed:</strong> response hedges, declines, or doesn't actually answer.</li>
+            <li><strong>D — Flag ground truth:</strong> use if the fact itself looks wrong or unverifiable (you can click the source link to check).</li>
+          </ul>
           <p style={{ marginTop: 10 }}>
             Expect this to take about <strong>45–60 minutes</strong>. You can pause and resume — progress is saved
             in your browser. Thank you.
