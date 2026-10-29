@@ -2,7 +2,6 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
-import { supabase } from "@/lib/supabase";
 
 type Source = { url: string; label: string };
 
@@ -76,17 +75,21 @@ export default function Grade() {
       setSubmitting(true);
       setError(null);
       try {
-        const { error: dbError } = await supabase.from("ratings").insert({
-          grader_name: grader.name,
-          grader_email: grader.email || null,
-          verdict_id: item.id,
-          institution: item.institution,
-          model: item.model,
-          condition: item.condition,
-          human_verdict: verdict,
-          rating_ms: Date.now() - startedAt,
+        const res = await fetch("/api/rate", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            grader_name: grader.name,
+            grader_email: grader.email || null,
+            verdict_id: item.id,
+            institution: item.institution,
+            model: item.model,
+            condition: item.condition,
+            human_verdict: verdict,
+            rating_ms: Date.now() - startedAt,
+          }),
         });
-        if (dbError) {
+        if (!res.ok) {
           setError("Could not save your rating. Retry?");
           setSubmitting(false);
           return;
@@ -165,22 +168,20 @@ export default function Grade() {
       <h2>Your verdict</h2>
       <button className="verdict-btn a" onClick={() => submit("A")} disabled={submitting}>
         <span className="kbd">A</span>
-        <strong>Correct</strong> — the response accurately states the fact (or the key part of it).
+        <span className="label-text"><strong>Correct</strong> — the response accurately states the fact (or the key part of it).</span>
       </button>
       <button className="verdict-btn b" onClick={() => submit("B")} disabled={submitting}>
         <span className="kbd">B</span>
-        <strong>Confidently wrong</strong> — the response states something that contradicts the fact, or fabricates
-        a plausible-sounding wrong answer.
+        <span className="label-text"><strong>Confidently wrong</strong> — the response states something that contradicts the fact, or fabricates a plausible-sounding wrong answer.</span>
       </button>
       <button className="verdict-btn c" onClick={() => submit("C")} disabled={submitting}>
         <span className="kbd">C</span>
-        <strong>Not addressed</strong> — the response hedges, declines, or does not actually answer the question.
+        <span className="label-text"><strong>Not addressed</strong> — the response hedges, declines, or does not actually answer the question.</span>
       </button>
 
       <button className="verdict-btn d" onClick={() => submit("FLAG")} disabled={submitting}>
         <span className="kbd">D</span>
-        <strong>Flag ground truth</strong> — the stated fact looks wrong, unverifiable, or ambiguous.
-        Use this when you cannot judge the response because the fact itself is suspect.
+        <span className="label-text"><strong>Flag ground truth</strong> — the stated fact looks wrong, unverifiable, or ambiguous. Use this when you cannot judge the response because the fact itself is suspect.</span>
       </button>
 
       <div className="skip-row">

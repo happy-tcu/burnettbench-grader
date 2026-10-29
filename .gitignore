@@ -8,3 +8,6 @@ out/
 
 # Keep private verdicts out of git
 private/
+
+# Local-mode ratings (dev only; use Supabase for production)
+data/
