@@ -11,3 +11,4 @@ private/
 
 # Local-mode ratings (dev only; use Supabase for production)
 data/
+.vercel
