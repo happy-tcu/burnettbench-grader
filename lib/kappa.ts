@@ -38,6 +38,56 @@ export function cohenKappa(
   return (po - pe) / (1 - pe);
 }
 
+/**
+ * Bootstrap 95% CI on Cohen's kappa via resampling with replacement.
+ * N=1000 is enough for display purposes.
+ */
+export function bootstrapKappaCI(
+  a: string[],
+  b: string[],
+  categories: string[] = ["A", "B", "C"],
+  nSamples = 1000
+): { low: number; high: number } {
+  if (a.length < 10) return { low: NaN, high: NaN };
+  const n = a.length;
+  const samples: number[] = [];
+  for (let s = 0; s < nSamples; s++) {
+    const aa: string[] = [];
+    const bb: string[] = [];
+    for (let i = 0; i < n; i++) {
+      const idx = Math.floor(Math.random() * n);
+      aa.push(a[idx]);
+      bb.push(b[idx]);
+    }
+    samples.push(cohenKappa(aa, bb, categories));
+  }
+  samples.sort((x, y) => x - y);
+  return {
+    low: samples[Math.floor(nSamples * 0.025)],
+    high: samples[Math.floor(nSamples * 0.975)],
+  };
+}
+
+/**
+ * Confusion matrix for two raters.
+ * Returns a k×k array where mat[i][j] = count of items where rater a=cat[i] and rater b=cat[j].
+ */
+export function confusionMatrix(
+  a: string[],
+  b: string[],
+  categories: string[] = ["A", "B", "C"]
+): number[][] {
+  const k = categories.length;
+  const idx = new Map(categories.map((c, i) => [c, i]));
+  const mat: number[][] = Array.from({ length: k }, () => Array(k).fill(0));
+  for (let i = 0; i < a.length; i++) {
+    const ia = idx.get(a[i]);
+    const ib = idx.get(b[i]);
+    if (ia !== undefined && ib !== undefined) mat[ia][ib] += 1;
+  }
+  return mat;
+}
+
 export function majority(verdicts: string[]): { verdict: string | null; tied: boolean } {
   const counts: Record<string, number> = {};
   for (const v of verdicts) counts[v] = (counts[v] ?? 0) + 1;

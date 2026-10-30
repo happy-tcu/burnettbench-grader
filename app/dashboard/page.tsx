@@ -1,4 +1,4 @@
-import { cohenKappa, majority } from "@/lib/kappa";
+import { cohenKappa, majority, bootstrapKappaCI, confusionMatrix } from "@/lib/kappa";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -16,6 +16,13 @@ type Rating = {
 };
 
 type Judge = { question_id: string; judge_verdict: "A" | "B" | "C" };
+type Question = {
+  id: string;
+  institution: string;
+  model: string;
+  condition: string;
+  category: string | null;
+};
 
 async function fetchAll(url: string, key: string, table: string): Promise<unknown[]> {
   const res = await fetch(`${url}/rest/v1/${table}?select=*&limit=5000`, {
@@ -73,15 +80,19 @@ export default async function Dashboard({
 
   let ratings: Rating[] = [];
   let judges: Judge[] = [];
+  let questions: Question[] = [];
   let fetchError: string | null = null;
   try {
-    [ratings, judges] = (await Promise.all([
+    [ratings, judges, questions] = (await Promise.all([
       fetchAll(url, svc, "ratings"),
       fetchAll(url, svc, "judge_verdicts"),
-    ])) as [Rating[], Judge[]];
+      fetchAll(url, svc, "questions"),
+    ])) as [Rating[], Judge[], Question[]];
   } catch (e) {
     fetchError = String(e);
   }
+
+  const questionMap = new Map(questions.map((q) => [q.id, q]));
 
   // --- Overview ---
   const totalRatings = ratings.length;
@@ -173,6 +184,133 @@ export default async function Dashboard({
         majPairs.map((p) => p.j)
       )
     : null;
+  const majCI =
+    majPairs.length >= 10
+      ? bootstrapKappaCI(
+          majPairs.map((p) => p.h),
+          majPairs.map((p) => p.j)
+        )
+      : null;
+  const majConfusion =
+    majPairs.length > 0
+      ? confusionMatrix(
+          majPairs.map((p) => p.h),
+          majPairs.map((p) => p.j)
+        )
+      : null;
+
+  // --- Per-institution agreement (human majority vs judge) ---
+  const institutions = Array.from(new Set(questions.map((q) => q.institution))).sort();
+  const perInstitution = institutions.map((inst) => {
+    const subset = majPairs.filter((p, i) => {
+      const vid = Array.from(perItem.keys())[i]; // approximate: use index-aligned
+      return vid && questionMap.get(vid)?.institution === inst;
+    });
+    // Rebuild properly from scratch to avoid index drift
+    const ids: string[] = [];
+    for (const [vid] of perItem) ids.push(vid);
+    const instIds = ids.filter((vid) => questionMap.get(vid)?.institution === inst);
+    const pairs: { h: string; j: string }[] = [];
+    for (const vid of instIds) {
+      const votes = perItem.get(vid)!;
+      if (votes.length < 2) continue;
+      const { verdict, tied } = majority(votes);
+      if (tied || !verdict) continue;
+      const j = judgeMap.get(vid);
+      if (!j) continue;
+      pairs.push({ h: verdict, j });
+    }
+    const k = pairs.length ? cohenKappa(pairs.map((p) => p.h), pairs.map((p) => p.j)) : null;
+    const agree = pairs.filter((p) => p.h === p.j).length;
+    return { inst, n: pairs.length, kappa: k, agree };
+  });
+
+  // --- Per-model agreement (human majority vs judge) ---
+  const modelSet = Array.from(new Set(questions.map((q) => q.model))).sort();
+  const perModel = modelSet.map((model) => {
+    const ids: string[] = [];
+    for (const [vid] of perItem) ids.push(vid);
+    const mdIds = ids.filter((vid) => questionMap.get(vid)?.model === model);
+    const pairs: { h: string; j: string }[] = [];
+    for (const vid of mdIds) {
+      const votes = perItem.get(vid)!;
+      if (votes.length < 2) continue;
+      const { verdict, tied } = majority(votes);
+      if (tied || !verdict) continue;
+      const j = judgeMap.get(vid);
+      if (!j) continue;
+      pairs.push({ h: verdict, j });
+    }
+    const k = pairs.length ? cohenKappa(pairs.map((p) => p.h), pairs.map((p) => p.j)) : null;
+    const agree = pairs.filter((p) => p.h === p.j).length;
+    return { model, n: pairs.length, kappa: k, agree };
+  });
+
+  // --- Flagged items audit (which items are being flagged, and by whom) ---
+  const flagsByItem = new Map<string, string[]>();
+  for (const r of ratings) {
+    if (r.human_verdict !== "FLAG") continue;
+    if (!flagsByItem.has(r.verdict_id)) flagsByItem.set(r.verdict_id, []);
+    flagsByItem.get(r.verdict_id)!.push(r.grader_name);
+  }
+  const flagRows = Array.from(flagsByItem.entries())
+    .map(([vid, graders]) => {
+      const q = questionMap.get(vid);
+      return {
+        vid,
+        graders,
+        institution: q?.institution ?? "?",
+        model: q?.model ?? "?",
+        condition: q?.condition ?? "?",
+      };
+    })
+    .sort((a, b) => b.graders.length - a.graders.length);
+
+  const flagsByInstitution = new Map<string, number>();
+  for (const inst of institutions) flagsByInstitution.set(inst, 0);
+  for (const [vid] of flagsByItem) {
+    const q = questionMap.get(vid);
+    if (q) flagsByInstitution.set(q.institution, (flagsByInstitution.get(q.institution) ?? 0) + 1);
+  }
+
+  // --- Grader fatigue: rolling avg seconds per item (first third vs last third) ---
+  const fatigue = perGrader.map((g) => {
+    const myRatings = ratings
+      .filter(
+        (r) =>
+          r.grader_name === g.name &&
+          ["A", "B", "C"].includes(r.human_verdict) &&
+          typeof r.rating_ms === "number"
+      )
+      .sort((a, b) => a.created_at.localeCompare(b.created_at));
+    if (myRatings.length < 15) return { name: g.name, first: null, last: null, delta: null };
+    const third = Math.floor(myRatings.length / 3);
+    const first = myRatings.slice(0, third);
+    const last = myRatings.slice(myRatings.length - third);
+    const avg = (xs: Rating[]) =>
+      xs.reduce((s, r) => s + (r.rating_ms ?? 0), 0) / xs.length / 1000;
+    const firstAvg = avg(first);
+    const lastAvg = avg(last);
+    return {
+      name: g.name,
+      first: firstAvg,
+      last: lastAvg,
+      delta: lastAvg - firstAvg,
+      total: myRatings.length,
+    };
+  });
+
+  // --- Time-to-completion estimate per grader ---
+  const eta = perGrader.map((g) => {
+    const myRatings = ratings.filter((r) => r.grader_name === g.name);
+    if (myRatings.length < 5) return { name: g.name, remaining: 300 - myRatings.length, etaMin: null };
+    const times = myRatings
+      .map((r) => r.rating_ms)
+      .filter((x): x is number => typeof x === "number");
+    const avgSec = times.length ? times.reduce((a, b) => a + b, 0) / times.length / 1000 : 20;
+    const remaining = 300 - myRatings.length;
+    return { name: g.name, remaining, etaMin: Math.round((remaining * avgSec) / 60) };
+  });
 
   // --- Pairwise grader agreement (Cohen's kappa) ---
   const pairwise: { g1: string; g2: string; n: number; kappa: number }[] = [];
@@ -328,6 +466,12 @@ export default async function Dashboard({
                 </td>
                 <td>
                   <strong>{majKappa.toFixed(3)}</strong>{" "}
+                  {majCI && !isNaN(majCI.low) && (
+                    <span style={{ color: "var(--muted)", fontSize: 11 }}>
+                      95% CI [{majCI.low.toFixed(2)}, {majCI.high.toFixed(2)}]
+                    </span>
+                  )}
+                  <br />
                   <span style={{ color: "var(--muted)", fontSize: 11 }}>
                     {kappaLabel(majKappa)}
                   </span>
@@ -364,6 +508,273 @@ export default async function Dashboard({
                   <span style={{ color: "var(--muted)", fontSize: 11 }}>
                     {kappaLabel(p.kappa)}
                   </span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
+
+      {majConfusion && majPairs.length > 0 && (
+        <>
+          <h2>Confusion matrix · human majority × judge</h2>
+          <p style={{ color: "var(--muted)", fontSize: 12, marginBottom: 12 }}>
+            Rows: what humans voted. Columns: what GPT-4o-mini said. Diagonal cells are agreements;
+            off-diagonal are the specific disagreements. Patterns here tell the paper's story.
+          </p>
+          <table className="dash-table confusion">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Judge: A</th>
+                <th>Judge: B</th>
+                <th>Judge: C</th>
+                <th>Row total</th>
+              </tr>
+            </thead>
+            <tbody>
+              {["A", "B", "C"].map((row, i) => {
+                const rowTotal = majConfusion[i].reduce((s, v) => s + v, 0);
+                return (
+                  <tr key={row}>
+                    <td>
+                      <strong>Human: {row}</strong>
+                    </td>
+                    {[0, 1, 2].map((j) => (
+                      <td
+                        key={j}
+                        className={i === j ? "confusion-diag" : "confusion-off"}
+                      >
+                        <strong>{majConfusion[i][j]}</strong>
+                      </td>
+                    ))}
+                    <td style={{ color: "var(--muted)" }}>{rowTotal}</td>
+                  </tr>
+                );
+              })}
+              <tr>
+                <td style={{ color: "var(--muted)" }}>Col total</td>
+                {[0, 1, 2].map((j) => (
+                  <td key={j} style={{ color: "var(--muted)" }}>
+                    {majConfusion.reduce((s, row) => s + row[j], 0)}
+                  </td>
+                ))}
+                <td style={{ color: "var(--muted)" }}>{majPairs.length}</td>
+              </tr>
+            </tbody>
+          </table>
+        </>
+      )}
+
+      <h2>Agreement by institution</h2>
+      {perInstitution.filter((p) => p.n > 0).length === 0 ? (
+        <div className="card">
+          <p style={{ color: "var(--muted)" }}>Need ≥2 raters per item in each institution.</p>
+        </div>
+      ) : (
+        <table className="dash-table">
+          <thead>
+            <tr>
+              <th>Institution</th>
+              <th>Items with ≥2 raters</th>
+              <th>Raw agreement</th>
+              <th>Cohen's κ</th>
+            </tr>
+          </thead>
+          <tbody>
+            {perInstitution
+              .filter((p) => p.n > 0)
+              .map((p) => (
+                <tr key={p.inst}>
+                  <td>{p.inst}</td>
+                  <td>{p.n}</td>
+                  <td>
+                    {p.agree} / {p.n}{" "}
+                    <span style={{ color: "var(--muted)", fontSize: 11 }}>
+                      ({Math.round((p.agree / p.n) * 100)}%)
+                    </span>
+                  </td>
+                  <td>
+                    <strong>{p.kappa !== null ? p.kappa.toFixed(3) : "—"}</strong>{" "}
+                    {p.kappa !== null && (
+                      <span style={{ color: "var(--muted)", fontSize: 11 }}>
+                        {kappaLabel(p.kappa)}
+                      </span>
+                    )}
+                  </td>
+                </tr>
+              ))}
+          </tbody>
+        </table>
+      )}
+
+      <h2>Agreement by model</h2>
+      {perModel.filter((p) => p.n > 0).length === 0 ? (
+        <div className="card">
+          <p style={{ color: "var(--muted)" }}>Need ≥2 raters per item.</p>
+        </div>
+      ) : (
+        <table className="dash-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Items with ≥2 raters</th>
+              <th>Raw agreement</th>
+              <th>Cohen's κ</th>
+            </tr>
+          </thead>
+          <tbody>
+            {perModel
+              .filter((p) => p.n > 0)
+              .map((p) => (
+                <tr key={p.model}>
+                  <td>{p.model}</td>
+                  <td>{p.n}</td>
+                  <td>
+                    {p.agree} / {p.n}{" "}
+                    <span style={{ color: "var(--muted)", fontSize: 11 }}>
+                      ({Math.round((p.agree / p.n) * 100)}%)
+                    </span>
+                  </td>
+                  <td>
+                    <strong>{p.kappa !== null ? p.kappa.toFixed(3) : "—"}</strong>{" "}
+                    {p.kappa !== null && (
+                      <span style={{ color: "var(--muted)", fontSize: 11 }}>
+                        {kappaLabel(p.kappa)}
+                      </span>
+                    )}
+                  </td>
+                </tr>
+              ))}
+          </tbody>
+        </table>
+      )}
+
+      <h2>Flagged ground-truth items ({flagRows.length})</h2>
+      <p style={{ color: "var(--muted)", fontSize: 12, marginBottom: 12 }}>
+        Items a grader marked with D. Review these facts manually; if the fact itself is wrong or
+        unverifiable, exclude the item from the final κ computation.
+      </p>
+      {flagRows.length === 0 ? (
+        <div className="card">
+          <p style={{ color: "var(--muted)" }}>No flags yet.</p>
+        </div>
+      ) : (
+        <table className="dash-table">
+          <thead>
+            <tr>
+              <th>Item ID</th>
+              <th>Institution</th>
+              <th>Model</th>
+              <th>Condition</th>
+              <th>Flagged by (n)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {flagRows.map((f) => (
+              <tr key={f.vid}>
+                <td style={{ fontFamily: "ui-monospace, monospace" }}>{f.vid}</td>
+                <td>{f.institution}</td>
+                <td>{f.model}</td>
+                <td>{f.condition}</td>
+                <td>
+                  <strong>{f.graders.length}</strong>{" "}
+                  <span style={{ color: "var(--muted)", fontSize: 11 }}>
+                    ({f.graders.join(", ")})
+                  </span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
+
+      {Array.from(flagsByInstitution.entries()).some(([, n]) => n > 0) && (
+        <>
+          <h2>Flag rate by institution</h2>
+          <div className="stats-row">
+            {Array.from(flagsByInstitution.entries()).map(([inst, n]) => (
+              <StatBox
+                key={inst}
+                label={inst}
+                value={`${n} / ${questions.filter((q) => q.institution === inst).length}`}
+              />
+            ))}
+          </div>
+        </>
+      )}
+
+      <h2>Grader fatigue (first-third vs last-third avg sec/item)</h2>
+      {fatigue.filter((f) => f.first !== null).length === 0 ? (
+        <div className="card">
+          <p style={{ color: "var(--muted)" }}>Need ≥15 ratings per grader to detect fatigue.</p>
+        </div>
+      ) : (
+        <table className="dash-table">
+          <thead>
+            <tr>
+              <th>Grader</th>
+              <th>First third (s)</th>
+              <th>Last third (s)</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            {fatigue
+              .filter((f) => f.first !== null)
+              .map((f) => (
+                <tr key={f.name}>
+                  <td>{f.name}</td>
+                  <td>{f.first!.toFixed(1)}</td>
+                  <td>{f.last!.toFixed(1)}</td>
+                  <td
+                    style={{
+                      color: (f.delta ?? 0) > 2 ? "var(--red)" : (f.delta ?? 0) < -2 ? "var(--green)" : "var(--fg)",
+                    }}
+                  >
+                    {(f.delta ?? 0) > 0 ? "+" : ""}
+                    {f.delta!.toFixed(1)}s{" "}
+                    <span style={{ color: "var(--muted)", fontSize: 11 }}>
+                      ({(f.delta ?? 0) > 2 ? "slowing" : (f.delta ?? 0) < -2 ? "speeding up" : "stable"})
+                    </span>
+                  </td>
+                </tr>
+              ))}
+          </tbody>
+        </table>
+      )}
+
+      <h2>Time to completion</h2>
+      {eta.length === 0 ? (
+        <div className="card">
+          <p style={{ color: "var(--muted)" }}>No active graders yet.</p>
+        </div>
+      ) : (
+        <table className="dash-table">
+          <thead>
+            <tr>
+              <th>Grader</th>
+              <th>Done</th>
+              <th>Remaining</th>
+              <th>ETA at current pace</th>
+            </tr>
+          </thead>
+          <tbody>
+            {eta.map((e) => (
+              <tr key={e.name}>
+                <td>{e.name}</td>
+                <td>{300 - e.remaining} / 300</td>
+                <td>{e.remaining}</td>
+                <td>
+                  {e.etaMin !== null ? (
+                    <strong>
+                      {e.etaMin >= 60
+                        ? `${Math.floor(e.etaMin / 60)}h ${e.etaMin % 60}m`
+                        : `${e.etaMin}m`}
+                    </strong>
+                  ) : (
+                    <span style={{ color: "var(--muted)" }}>need ≥5 ratings</span>
+                  )}
                 </td>
               </tr>
             ))}

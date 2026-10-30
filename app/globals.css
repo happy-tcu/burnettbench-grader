@@ -363,3 +363,9 @@ button.primary:hover { background: var(--bg); color: var(--fg); }
   transition: width 0.2s;
 }
 .dist-text { font-size: 12px; font-family: ui-monospace, monospace; }
+
+/* Confusion matrix */
+.dash-table.confusion td { text-align: center; font-family: ui-monospace, monospace; font-size: 14px; }
+.dash-table.confusion td:first-child { text-align: left; font-family: inherit; }
+.confusion-diag { background: #f0f7f0; }
+.confusion-off { background: #fef5f5; }
