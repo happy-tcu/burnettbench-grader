@@ -1,4 +1,7 @@
 import { cohenKappa, majority, bootstrapKappaCI, confusionMatrix } from "@/lib/kappa";
+import { verifySession } from "@/lib/auth";
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
 import { BarGroup, KappaBars, Heatmap3x3, TimelineChart } from "./charts";
 
 export const dynamic = "force-dynamic";
@@ -34,46 +37,11 @@ async function fetchAll(url: string, key: string, table: string): Promise<unknow
   return res.json();
 }
 
-export default async function Dashboard({
-  searchParams,
-}: {
-  searchParams: Promise<{ pw?: string }>;
-}) {
-  const { pw } = await searchParams;
-  const expected = process.env.DASHBOARD_PASSWORD;
-
-  if (!expected) {
-    return (
-      <main>
-        <h1>Dashboard</h1>
-        <p className="subtitle">Not configured</p>
-        <div className="card">
-          <p>
-            Set <code>DASHBOARD_PASSWORD</code> in Vercel env vars, then visit{" "}
-            <code>/dashboard?pw=&lt;value&gt;</code>.
-          </p>
-        </div>
-      </main>
-    );
-  }
-  if (pw !== expected) {
-    return (
-      <main>
-        <h1>Dashboard</h1>
-        <p className="subtitle">Password required</p>
-        <div className="card">
-          <form method="GET">
-            <div className="field">
-              <label>Password</label>
-              <input type="password" name="pw" autoFocus />
-            </div>
-            <button className="primary" type="submit">
-              Enter →
-            </button>
-          </form>
-        </div>
-      </main>
-    );
+export default async function Dashboard() {
+  const jar = await cookies();
+  const session = jar.get("bb_dash")?.value;
+  if (!verifySession(session)) {
+    redirect("/dashboard/login");
   }
 
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL!;
