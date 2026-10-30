@@ -369,3 +369,8 @@ button.primary:hover { background: var(--bg); color: var(--fg); }
 .dash-table.confusion td:first-child { text-align: left; font-family: inherit; }
 .confusion-diag { background: #f0f7f0; }
 .confusion-off { background: #fef5f5; }
+
+/* Charts */
+.chart { display: block; max-width: 100%; }
+.chart-card { padding: 18px 20px; }
+.chart text { font-family: -apple-system, BlinkMacSystemFont, sans-serif; }

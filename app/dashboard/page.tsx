@@ -1,4 +1,5 @@
 import { cohenKappa, majority, bootstrapKappaCI, confusionMatrix } from "@/lib/kappa";
+import { BarGroup, KappaBars, Heatmap3x3, TimelineChart } from "./charts";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -402,7 +403,18 @@ export default async function Dashboard({
         </table>
       )}
 
-      <h2>Verdict distribution</h2>
+      <h2>Verdict distribution · humans vs GPT-4o-mini</h2>
+      <div className="card chart-card">
+        <BarGroup
+          bars={[
+            { label: "A", value: dist.A, second: judgeDist.A },
+            { label: "B", value: dist.B, second: judgeDist.B },
+            { label: "C", value: dist.C, second: judgeDist.C },
+            { label: "D (flag)", value: dist.FLAG, color: "#c8102e" },
+            { label: "S (skip)", value: dist.SKIP, color: "#999" },
+          ]}
+        />
+      </div>
       <div className="dist-grid">
         <DistBar label="A — Correct" count={dist.A} total={totalRatings} judge={judgeDist.A} />
         <DistBar label="B — Confidently wrong" count={dist.B} total={totalRatings} judge={judgeDist.B} />
@@ -410,6 +422,34 @@ export default async function Dashboard({
         <DistBar label="D — Flag ground truth" count={dist.FLAG} total={totalRatings} judge={null} />
         <DistBar label="S — Skip" count={dist.SKIP} total={totalRatings} judge={null} />
       </div>
+
+      {ratings.length >= 5 && (
+        <>
+          <h2>Ratings over time</h2>
+          <div className="card chart-card">
+            <TimelineChart
+              points={(() => {
+                const perG = new Map<string, { t: number; value: number }[]>();
+                for (const g of graderNames) perG.set(g, []);
+                const sorted = [...ratings].sort((a, b) =>
+                  a.created_at.localeCompare(b.created_at)
+                );
+                const counts: Record<string, number> = {};
+                const pts: { t: number; value: number; grader: string }[] = [];
+                for (const r of sorted) {
+                  counts[r.grader_name] = (counts[r.grader_name] ?? 0) + 1;
+                  pts.push({
+                    t: new Date(r.created_at).getTime(),
+                    value: counts[r.grader_name],
+                    grader: r.grader_name,
+                  });
+                }
+                return pts;
+              })()}
+            />
+          </div>
+        </>
+      )}
 
       <h2>Coverage of 300 items</h2>
       <div className="stats-row">
@@ -522,6 +562,9 @@ export default async function Dashboard({
             Rows: what humans voted. Columns: what GPT-4o-mini said. Diagonal cells are agreements;
             off-diagonal are the specific disagreements. Patterns here tell the paper's story.
           </p>
+          <div className="card chart-card" style={{ display: "flex", justifyContent: "center" }}>
+            <Heatmap3x3 matrix={majConfusion} />
+          </div>
           <table className="dash-table confusion">
             <thead>
               <tr>
@@ -572,7 +615,15 @@ export default async function Dashboard({
           <p style={{ color: "var(--muted)" }}>Need ≥2 raters per item in each institution.</p>
         </div>
       ) : (
-        <table className="dash-table">
+        <>
+          <div className="card chart-card">
+            <KappaBars
+              bars={perInstitution
+                .filter((p) => p.n > 0 && p.kappa !== null)
+                .map((p) => ({ label: p.inst, kappa: p.kappa!, n: p.n }))}
+            />
+          </div>
+          <table className="dash-table">
           <thead>
             <tr>
               <th>Institution</th>
@@ -606,6 +657,7 @@ export default async function Dashboard({
               ))}
           </tbody>
         </table>
+        </>
       )}
 
       <h2>Agreement by model</h2>
@@ -614,7 +666,15 @@ export default async function Dashboard({
           <p style={{ color: "var(--muted)" }}>Need ≥2 raters per item.</p>
         </div>
       ) : (
-        <table className="dash-table">
+        <>
+          <div className="card chart-card">
+            <KappaBars
+              bars={perModel
+                .filter((p) => p.n > 0 && p.kappa !== null)
+                .map((p) => ({ label: p.model, kappa: p.kappa!, n: p.n }))}
+            />
+          </div>
+          <table className="dash-table">
           <thead>
             <tr>
               <th>Model</th>
@@ -648,6 +708,7 @@ export default async function Dashboard({
               ))}
           </tbody>
         </table>
+        </>
       )}
 
       <h2>Flagged ground-truth items ({flagRows.length})</h2>
