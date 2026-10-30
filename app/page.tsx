@@ -25,9 +25,10 @@ export default function Home() {
         <div className="instructions">
           <p>
             You are helping validate an AI judge used in our empirical study of the <code>llms.txt</code> standard.
-            For each of ~120 items, you'll see a <strong>question</strong>, the <strong>ground-truth fact</strong>{" "}
-            (the authoritative answer, scraped from Wikipedia or the institution's own website), and the{" "}
-            <strong>model's response</strong>. Your job is to compare the response to the fact and decide:
+            For each of <strong>300 items</strong>, you'll see a <strong>question</strong>, the{" "}
+            <strong>ground-truth fact</strong> (the authoritative answer, scraped from Wikipedia or the institution's
+            own website), and the <strong>model's response</strong>. Your job is to compare the response to the fact
+            and decide:
           </p>
           <ul style={{ margin: "6px 0 8px 20px", fontSize: 13 }}>
             <li><strong>A — Correct:</strong> response matches the fact.</li>
@@ -36,8 +37,17 @@ export default function Home() {
             <li><strong>D — Flag ground truth:</strong> use if the fact itself looks wrong or unverifiable (you can click the source link to check).</li>
           </ul>
           <p style={{ marginTop: 10 }}>
-            Expect this to take about <strong>45–60 minutes</strong>. You can pause and resume — progress is saved
-            in your browser. Thank you.
+            Expect this to take about <strong>90 minutes</strong>. You can pause and resume — progress is saved
+            in your browser.
+          </p>
+          <p style={{ marginTop: 10 }}>
+            <strong>Keyboard shortcuts.</strong> Press <code>A</code> <code>B</code> <code>C</code>{" "}
+            <code>D</code> <code>S</code> (skip) instead of clicking — it's about a third faster.
+          </p>
+          <p style={{ marginTop: 10 }}>
+            <strong>Why your ratings matter.</strong> We'll compare your verdicts to GPT-4o-mini's verdicts to
+            compute inter-rater agreement (Cohen's κ) for the paper. Every grader sees the same 300 items in a
+            fixed order so results are directly comparable.
           </p>
           <p style={{ marginTop: 10, fontSize: 12 }}>
             Grader anonymity: we store your name only to compute inter-rater agreement. It is not published.
