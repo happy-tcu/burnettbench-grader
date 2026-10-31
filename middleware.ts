@@ -63,5 +63,7 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/dashboard/:path*", "/api/:path*"],
+  // Match everything except Next.js internals and static assets, so security
+  // headers apply site-wide. Rate-limit buckets still only fire on matched paths above.
+  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
 };
