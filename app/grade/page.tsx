@@ -45,15 +45,21 @@ function formatElapsed(ms: number): string {
   return h > 0 ? `${h}:${pad(m)}:${pad(s)}` : `${pad(m)}:${pad(s)}`;
 }
 
+const PER_ITEM_CAP_MS = 180_000; // 3 min per-item engaged cap
+const MAX_PAYABLE_MS = 7_200_000; // 2 hr hard cap on billable time per grader
+
 export default function Grade() {
   const router = useRouter();
   const [items, setItems] = useState<Item[] | null>(null);
   const [idx, setIdx] = useState(0);
-  const [startedAt, setStartedAt] = useState<number>(Date.now());
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [grader, setGrader] = useState<{ name: string; email: string } | null>(null);
-  const [sessionStart, setSessionStart] = useState<number | null>(null);
+  // Engaged time tracking: paused when tab hidden, capped per item.
+  const [itemStartMs, setItemStartMs] = useState<number>(Date.now());
+  const [itemAccumMs, setItemAccumMs] = useState<number>(0);
+  const [isPaused, setIsPaused] = useState<boolean>(false);
+  const [totalEngagedMs, setTotalEngagedMs] = useState<number>(0);
   const [now, setNow] = useState<number>(Date.now());
 
   useEffect(() => {
@@ -68,12 +74,13 @@ export default function Grade() {
     const savedIdx = parseInt(localStorage.getItem(`bb_idx_${name}`) || "0", 10);
     setIdx(savedIdx);
 
-    // Resume-or-start session clock
-    const key = `bb_session_start_${name}`;
-    const existing = localStorage.getItem(key);
-    const start = existing ? parseInt(existing, 10) : Date.now();
-    if (!existing) localStorage.setItem(key, String(start));
-    setSessionStart(start);
+    // Resume engaged ms accumulator
+    const engagedKey = `bb_engaged_${name}`;
+    const savedEngaged = parseInt(localStorage.getItem(engagedKey) || "0", 10);
+    setTotalEngagedMs(savedEngaged);
+    setItemStartMs(Date.now());
+    setItemAccumMs(0);
+    setIsPaused(document.visibilityState === "hidden");
 
     fetch("/api/questions")
       .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
@@ -81,14 +88,31 @@ export default function Grade() {
       .catch(() => setError("Failed to load items."));
   }, [router]);
 
-  // Live clock, 1 Hz
+  // Live clock, 1 Hz (drives the displayed engaged-time counter)
   useEffect(() => {
     const t = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(t);
   }, []);
 
+  // Pause / resume on tab visibility
   useEffect(() => {
-    setStartedAt(Date.now());
+    const onVis = () => {
+      if (document.visibilityState === "hidden") {
+        // Record the active ms up to now and freeze
+        setItemAccumMs((prev) => prev + (Date.now() - itemStartMs));
+        setIsPaused(true);
+      } else {
+        setItemStartMs(Date.now());
+        setIsPaused(false);
+      }
+    };
+    document.addEventListener("visibilitychange", onVis);
+    return () => document.removeEventListener("visibilitychange", onVis);
+  }, [itemStartMs]);
+
+  useEffect(() => {
+    setItemStartMs(Date.now());
+    setItemAccumMs(0);
     setError(null);
   }, [idx]);
 
@@ -111,7 +135,10 @@ export default function Grade() {
             model: item.model,
             condition: item.condition,
             human_verdict: verdict,
-            rating_ms: Date.now() - startedAt,
+            rating_ms: Math.min(
+              itemAccumMs + (isPaused ? 0 : Date.now() - itemStartMs),
+              PER_ITEM_CAP_MS
+            ),
           }),
         });
         if (!res.ok) {
@@ -119,6 +146,15 @@ export default function Grade() {
           setSubmitting(false);
           return;
         }
+        // Accumulate the capped engaged ms into the grader's persistent total
+        const addedMs = Math.min(
+          itemAccumMs + (isPaused ? 0 : Date.now() - itemStartMs),
+          PER_ITEM_CAP_MS
+        );
+        const newTotal = Math.min(totalEngagedMs + addedMs, MAX_PAYABLE_MS);
+        setTotalEngagedMs(newTotal);
+        localStorage.setItem(`bb_engaged_${grader.name}`, String(newTotal));
+
         const nextIdx = idx + 1;
         localStorage.setItem(`bb_idx_${grader.name}`, String(nextIdx));
         if (nextIdx >= items.length) {
@@ -132,7 +168,7 @@ export default function Grade() {
         setSubmitting(false);
       }
     },
-    [items, idx, grader, startedAt, router]
+    [items, idx, grader, itemStartMs, itemAccumMs, isPaused, totalEngagedMs, router]
   );
 
   useEffect(() => {
@@ -154,6 +190,14 @@ export default function Grade() {
   const item = items[idx];
   const pct = Math.round(((idx) / items.length) * 100);
 
+  // Displayed timer: persisted engaged + current item's live active time
+  const currentItemActive = isPaused ? itemAccumMs : itemAccumMs + (now - itemStartMs);
+  const displayedEngaged = Math.min(
+    totalEngagedMs + Math.min(currentItemActive, PER_ITEM_CAP_MS),
+    MAX_PAYABLE_MS
+  );
+  const capReached = displayedEngaged >= MAX_PAYABLE_MS;
+
   return (
     <main>
       <div className="progress-bar">
@@ -161,11 +205,13 @@ export default function Grade() {
       </div>
       <div className="progress-text">
         <span><strong>{idx + 1}</strong> of {items.length} · Grader: {grader.name}</span>
-        {sessionStart && (
-          <span className="session-timer" title="Time worked this session">
-            {formatElapsed(now - sessionStart)}
-          </span>
-        )}
+        <span
+          className={`session-timer${isPaused ? " paused" : ""}${capReached ? " capped" : ""}`}
+          title="Billable time (pauses when tab is hidden; capped at 2 hours)"
+        >
+          {isPaused ? "⏸ " : ""}{formatElapsed(displayedEngaged)}
+          {capReached ? " · cap reached" : ""}
+        </span>
       </div>
 
       <div className="card">

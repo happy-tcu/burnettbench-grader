@@ -172,6 +172,8 @@ button.primary:hover { background: var(--bg); color: var(--fg); }
   color: var(--bg);
   font-size: 11px;
 }
+.session-timer.paused { background: var(--muted); color: var(--bg); }
+.session-timer.capped { background: var(--red); color: var(--bg); }
 
 /* Content blocks */
 .probe-text {
@@ -375,6 +377,22 @@ button.primary:hover { background: var(--bg); color: var(--fg); }
   transition: width 0.2s;
 }
 .dist-text { font-size: 12px; font-family: ui-monospace, monospace; }
+
+/* Flag chips on dashboard payment table */
+.flag-chip {
+  display: inline-block;
+  background: var(--red);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 2px 7px;
+  margin: 1px 3px 1px 0;
+  border-radius: 2px;
+}
+
+:root { --green: #0f7a3a; }
 
 /* Confusion matrix */
 .dash-table.confusion td { text-align: center; font-family: ui-monospace, monospace; font-size: 14px; }

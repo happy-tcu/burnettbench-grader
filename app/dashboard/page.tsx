@@ -269,20 +269,49 @@ export default async function Dashboard() {
     };
   });
 
-  // --- Payment estimates per grader ---
-  // Hourly rate (RWF) + per-item max cap to prevent idle-time inflation
+  // --- Payment estimates + anti-cheat flags per grader ---
   const HOURLY_RWF = 5000;
-  const PER_ITEM_CAP_MS = 180_000; // 3 min max per item for pay calc
+  const PER_ITEM_CAP_MS = 180_000; // 3 min per-item cap
+  const MAX_PAYABLE_MS = 7_200_000; // 2 hr hard cap on billable time per grader
+
+  function median(xs: number[]): number {
+    if (!xs.length) return 0;
+    const sorted = [...xs].sort((a, b) => a - b);
+    const mid = Math.floor(sorted.length / 2);
+    return sorted.length % 2 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
+  }
+
   const payment = perGrader.map((g) => {
     const rows = ratings.filter((r) => r.grader_name === g.name);
-    const engagedMs = rows.reduce(
+    const rawPerItemMs = rows
+      .map((r) => r.rating_ms ?? 0)
+      .filter((x) => x > 0);
+    const engagedMsRaw = rows.reduce(
       (sum, r) => sum + Math.min(r.rating_ms ?? 0, PER_ITEM_CAP_MS),
       0
     );
+    const engagedMs = Math.min(engagedMsRaw, MAX_PAYABLE_MS);
+    const capHit = engagedMsRaw > MAX_PAYABLE_MS;
     const timestamps = rows.map((r) => new Date(r.created_at).getTime()).sort((a, b) => a - b);
     const wallMs = timestamps.length > 1 ? timestamps[timestamps.length - 1] - timestamps[0] : 0;
     const engagedHours = engagedMs / 3600_000;
     const estRwf = Math.round(engagedHours * HOURLY_RWF);
+
+    // Flags
+    const flags: string[] = [];
+    const medianMs = median(rawPerItemMs);
+    const nSpeedCheat = rawPerItemMs.filter((x) => x < 2000).length;
+    const nCapHit = rawPerItemMs.filter((x) => x >= PER_ITEM_CAP_MS - 1000).length;
+    const nTotal = rawPerItemMs.length;
+    const abcRows = rows.filter((r) => ["A", "B", "C"].includes(r.human_verdict));
+    const uniformVerdict = abcRows.length >= 10 && new Set(abcRows.map((r) => r.human_verdict)).size === 1;
+
+    if (uniformVerdict) flags.push("uniform verdict");
+    if (nTotal >= 10 && medianMs > 60_000) flags.push("slow median");
+    if (nTotal >= 10 && nCapHit / nTotal > 0.2) flags.push("padding (cap-hits)");
+    if (nTotal >= 10 && nSpeedCheat / nTotal > 0.3) flags.push("speed-cheating");
+    if (capHit) flags.push("payment cap reached");
+
     return {
       name: g.name,
       items: rows.length,
@@ -290,8 +319,15 @@ export default async function Dashboard() {
       engagedHours,
       wallMs,
       estRwf,
+      capHit,
+      flags,
+      medianMs,
+      nSpeedCheat,
+      nCapHit,
+      nTotal,
     };
   });
+
 
   const fmtDur = (ms: number) => {
     const t = Math.floor(ms / 1000);
@@ -808,8 +844,10 @@ export default async function Dashboard() {
 
       <h2>Payment estimate (5,000 RWF/hr)</h2>
       <p style={{ color: "var(--muted)", fontSize: 12, marginBottom: 12 }}>
-        Engaged time sums each item's rating duration, capped at 3 minutes per item so idle time
-        doesn't inflate the bill. Wall-clock is first → last submission for context.
+        Engaged time sums each item's rating duration, capped at 3 min per item and 2 hr per grader
+        (max 10,000 RWF). Flags surface patterns worth reviewing before payment: slow median
+        (padding), many cap-hit items (likely idle), many sub-2s items (speed-cheating), or uniform
+        A/B/C across the whole sample (not thinking).
       </p>
       {payment.filter((p) => p.items > 0).length === 0 ? (
         <div className="card">
@@ -821,8 +859,9 @@ export default async function Dashboard() {
             <tr>
               <th>Grader</th>
               <th>Items</th>
-              <th>Engaged time</th>
-              <th>Wall-clock span</th>
+              <th>Engaged</th>
+              <th>Median s/item</th>
+              <th>Flags</th>
               <th>Estimated pay (RWF)</th>
             </tr>
           </thead>
@@ -833,13 +872,33 @@ export default async function Dashboard() {
                 <tr key={p.name}>
                   <td>{p.name}</td>
                   <td>{p.items}</td>
-                  <td>{fmtDur(p.engagedMs)}</td>
-                  <td style={{ color: "var(--muted)", fontSize: 11 }}>{fmtDur(p.wallMs)}</td>
+                  <td>
+                    {fmtDur(p.engagedMs)}
+                    <br />
+                    <span style={{ color: "var(--muted)", fontSize: 11 }}>
+                      wall {fmtDur(p.wallMs)}
+                    </span>
+                  </td>
+                  <td style={{ fontFamily: "ui-monospace, monospace" }}>
+                    {(p.medianMs / 1000).toFixed(1)}
+                  </td>
+                  <td>
+                    {p.flags.length === 0 ? (
+                      <span style={{ color: "var(--green)", fontSize: 11 }}>clean</span>
+                    ) : (
+                      p.flags.map((f, i) => (
+                        <span key={i} className="flag-chip">
+                          {f}
+                        </span>
+                      ))
+                    )}
+                  </td>
                   <td>
                     <strong>{p.estRwf.toLocaleString()} RWF</strong>
                     <br />
                     <span style={{ color: "var(--muted)", fontSize: 11 }}>
                       {p.engagedHours.toFixed(2)} hr
+                      {p.capHit && " · capped"}
                     </span>
                   </td>
                 </tr>
@@ -850,6 +909,7 @@ export default async function Dashboard() {
               </td>
               <td>{payment.reduce((s, p) => s + p.items, 0)}</td>
               <td>{fmtDur(payment.reduce((s, p) => s + p.engagedMs, 0))}</td>
+              <td></td>
               <td></td>
               <td>
                 <strong>
