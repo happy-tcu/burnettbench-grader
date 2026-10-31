@@ -35,6 +35,16 @@ const MODEL_LABEL: Record<string, string> = {
   "gemini-flash": "Gemini Flash",
 };
 
+function formatElapsed(ms: number): string {
+  if (ms < 0) ms = 0;
+  const total = Math.floor(ms / 1000);
+  const h = Math.floor(total / 3600);
+  const m = Math.floor((total % 3600) / 60);
+  const s = total % 60;
+  const pad = (n: number) => String(n).padStart(2, "0");
+  return h > 0 ? `${h}:${pad(m)}:${pad(s)}` : `${pad(m)}:${pad(s)}`;
+}
+
 export default function Grade() {
   const router = useRouter();
   const [items, setItems] = useState<Item[] | null>(null);
@@ -43,6 +53,8 @@ export default function Grade() {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [grader, setGrader] = useState<{ name: string; email: string } | null>(null);
+  const [sessionStart, setSessionStart] = useState<number | null>(null);
+  const [now, setNow] = useState<number>(Date.now());
 
   useEffect(() => {
     const name = localStorage.getItem("bb_grader_name");
@@ -56,11 +68,24 @@ export default function Grade() {
     const savedIdx = parseInt(localStorage.getItem(`bb_idx_${name}`) || "0", 10);
     setIdx(savedIdx);
 
+    // Resume-or-start session clock
+    const key = `bb_session_start_${name}`;
+    const existing = localStorage.getItem(key);
+    const start = existing ? parseInt(existing, 10) : Date.now();
+    if (!existing) localStorage.setItem(key, String(start));
+    setSessionStart(start);
+
     fetch("/api/questions")
       .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
       .then((data: Item[]) => setItems(data))
       .catch(() => setError("Failed to load items."));
   }, [router]);
+
+  // Live clock, 1 Hz
+  useEffect(() => {
+    const t = setInterval(() => setNow(Date.now()), 1000);
+    return () => clearInterval(t);
+  }, []);
 
   useEffect(() => {
     setStartedAt(Date.now());
@@ -135,7 +160,12 @@ export default function Grade() {
         <div className="progress-fill" style={{ width: `${pct}%` }} />
       </div>
       <div className="progress-text">
-        <strong>{idx + 1}</strong> of {items.length} · Grader: {grader.name}
+        <span><strong>{idx + 1}</strong> of {items.length} · Grader: {grader.name}</span>
+        {sessionStart && (
+          <span className="session-timer" title="Time worked this session">
+            {formatElapsed(now - sessionStart)}
+          </span>
+        )}
       </div>
 
       <div className="card">

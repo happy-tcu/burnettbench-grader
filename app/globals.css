@@ -159,6 +159,18 @@ button.primary:hover { background: var(--bg); color: var(--fg); }
   margin-bottom: 24px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.session-timer {
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-weight: 700;
+  letter-spacing: 0;
+  padding: 2px 8px;
+  background: var(--fg);
+  color: var(--bg);
+  font-size: 11px;
 }
 
 /* Content blocks */

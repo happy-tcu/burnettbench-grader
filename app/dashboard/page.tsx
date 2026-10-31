@@ -269,6 +269,39 @@ export default async function Dashboard() {
     };
   });
 
+  // --- Payment estimates per grader ---
+  // Hourly rate (RWF) + per-item max cap to prevent idle-time inflation
+  const HOURLY_RWF = 5000;
+  const PER_ITEM_CAP_MS = 180_000; // 3 min max per item for pay calc
+  const payment = perGrader.map((g) => {
+    const rows = ratings.filter((r) => r.grader_name === g.name);
+    const engagedMs = rows.reduce(
+      (sum, r) => sum + Math.min(r.rating_ms ?? 0, PER_ITEM_CAP_MS),
+      0
+    );
+    const timestamps = rows.map((r) => new Date(r.created_at).getTime()).sort((a, b) => a - b);
+    const wallMs = timestamps.length > 1 ? timestamps[timestamps.length - 1] - timestamps[0] : 0;
+    const engagedHours = engagedMs / 3600_000;
+    const estRwf = Math.round(engagedHours * HOURLY_RWF);
+    return {
+      name: g.name,
+      items: rows.length,
+      engagedMs,
+      engagedHours,
+      wallMs,
+      estRwf,
+    };
+  });
+
+  const fmtDur = (ms: number) => {
+    const t = Math.floor(ms / 1000);
+    const h = Math.floor(t / 3600);
+    const m = Math.floor((t % 3600) / 60);
+    const s = t % 60;
+    const pad = (n: number) => String(n).padStart(2, "0");
+    return h > 0 ? `${h}h ${pad(m)}m` : `${m}m ${pad(s)}s`;
+  };
+
   // --- Time-to-completion estimate per grader ---
   const eta = perGrader.map((g) => {
     const myRatings = ratings.filter((r) => r.grader_name === g.name);
@@ -769,6 +802,61 @@ export default async function Dashboard() {
                   </td>
                 </tr>
               ))}
+          </tbody>
+        </table>
+      )}
+
+      <h2>Payment estimate (5,000 RWF/hr)</h2>
+      <p style={{ color: "var(--muted)", fontSize: 12, marginBottom: 12 }}>
+        Engaged time sums each item's rating duration, capped at 3 minutes per item so idle time
+        doesn't inflate the bill. Wall-clock is first → last submission for context.
+      </p>
+      {payment.filter((p) => p.items > 0).length === 0 ? (
+        <div className="card">
+          <p style={{ color: "var(--muted)" }}>No ratings yet.</p>
+        </div>
+      ) : (
+        <table className="dash-table">
+          <thead>
+            <tr>
+              <th>Grader</th>
+              <th>Items</th>
+              <th>Engaged time</th>
+              <th>Wall-clock span</th>
+              <th>Estimated pay (RWF)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {payment
+              .filter((p) => p.items > 0)
+              .map((p) => (
+                <tr key={p.name}>
+                  <td>{p.name}</td>
+                  <td>{p.items}</td>
+                  <td>{fmtDur(p.engagedMs)}</td>
+                  <td style={{ color: "var(--muted)", fontSize: 11 }}>{fmtDur(p.wallMs)}</td>
+                  <td>
+                    <strong>{p.estRwf.toLocaleString()} RWF</strong>
+                    <br />
+                    <span style={{ color: "var(--muted)", fontSize: 11 }}>
+                      {p.engagedHours.toFixed(2)} hr
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            <tr style={{ borderTop: "2px solid var(--line)" }}>
+              <td>
+                <strong>Total payable</strong>
+              </td>
+              <td>{payment.reduce((s, p) => s + p.items, 0)}</td>
+              <td>{fmtDur(payment.reduce((s, p) => s + p.engagedMs, 0))}</td>
+              <td></td>
+              <td>
+                <strong>
+                  {payment.reduce((s, p) => s + p.estRwf, 0).toLocaleString()} RWF
+                </strong>
+              </td>
+            </tr>
           </tbody>
         </table>
       )}
