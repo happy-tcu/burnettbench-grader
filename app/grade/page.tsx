@@ -61,6 +61,7 @@ export default function Grade() {
   const [isPaused, setIsPaused] = useState<boolean>(false);
   const [totalEngagedMs, setTotalEngagedMs] = useState<number>(0);
   const [now, setNow] = useState<number>(Date.now());
+  const [comment, setComment] = useState<string>("");
 
   useEffect(() => {
     const name = localStorage.getItem("bb_grader_name");
@@ -114,6 +115,7 @@ export default function Grade() {
     setItemStartMs(Date.now());
     setItemAccumMs(0);
     setError(null);
+    setComment("");
   }, [idx]);
 
   const submit = useCallback(
@@ -139,6 +141,7 @@ export default function Grade() {
               itemAccumMs + (isPaused ? 0 : Date.now() - itemStartMs),
               PER_ITEM_CAP_MS
             ),
+            comment: comment.trim() || null,
           }),
         });
         if (!res.ok) {
@@ -168,12 +171,14 @@ export default function Grade() {
         setSubmitting(false);
       }
     },
-    [items, idx, grader, itemStartMs, itemAccumMs, isPaused, totalEngagedMs, router]
+    [items, idx, grader, itemStartMs, itemAccumMs, isPaused, totalEngagedMs, router, comment]
   );
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (submitting) return;
+      const target = e.target as HTMLElement | null;
+      if (target && (target.tagName === "TEXTAREA" || target.tagName === "INPUT")) return;
       if (e.key === "a" || e.key === "A") submit("A");
       if (e.key === "b" || e.key === "B") submit("B");
       if (e.key === "c" || e.key === "C") submit("C");
@@ -259,6 +264,22 @@ export default function Grade() {
         <span className="kbd">D</span>
         <span className="label-text"><strong>Flag ground truth</strong> — the stated fact looks wrong, unverifiable, or ambiguous. Use this when you cannot judge the response because the fact itself is suspect.</span>
       </button>
+
+      <div className="comment-row">
+        <label htmlFor="rating-comment" className="comment-label">
+          Optional note on your decision (edge cases, caveats, what tipped you one way)
+        </label>
+        <textarea
+          id="rating-comment"
+          className="comment-input"
+          value={comment}
+          onChange={(e) => setComment(e.target.value)}
+          placeholder="Optional — leave blank if the verdict is clean."
+          rows={3}
+          maxLength={2000}
+          disabled={submitting}
+        />
+      </div>
 
       <div className="skip-row">
         <button onClick={() => submit("SKIP")} disabled={submitting}>

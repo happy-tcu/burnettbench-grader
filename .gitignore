@@ -5,6 +5,7 @@ out/
 .env
 .DS_Store
 *.log
+tsconfig.tsbuildinfo
 
 # Keep private verdicts out of git
 private/

@@ -26,6 +26,7 @@ create table if not exists public.ratings (
   condition     text not null,
   human_verdict text not null check (human_verdict in ('A','B','C','FLAG','SKIP')),
   rating_ms     integer,
+  comment       text,
   created_at    timestamptz not null default now()
 );
 

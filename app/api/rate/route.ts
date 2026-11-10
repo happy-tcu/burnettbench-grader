@@ -38,6 +38,7 @@ type Payload = {
   condition: unknown;
   human_verdict: unknown;
   rating_ms?: unknown;
+  comment?: unknown;
 };
 
 function validate(p: Payload): { ok: true; row: Record<string, unknown> } | { ok: false; err: string } {
@@ -58,6 +59,13 @@ function validate(p: Payload): { ok: true; row: Record<string, unknown> } | { ok
   const ms = p.rating_ms;
   if (ms !== undefined && (typeof ms !== "number" || ms < 0 || ms > 600000))
     return { ok: false, err: "rating_ms out of range" };
+  let comment: string | null = null;
+  if (p.comment !== undefined && p.comment !== null) {
+    if (typeof p.comment !== "string") return { ok: false, err: "comment must be string" };
+    const trimmed = p.comment.trim();
+    if (trimmed.length > 2000) return { ok: false, err: "comment too long (max 2000 chars)" };
+    comment = trimmed.length ? trimmed : null;
+  }
   return {
     ok: true,
     row: {
@@ -69,6 +77,7 @@ function validate(p: Payload): { ok: true; row: Record<string, unknown> } | { ok
       condition: p.condition,
       human_verdict: p.human_verdict,
       rating_ms: typeof ms === "number" ? ms : null,
+      comment,
     },
   };
 }
