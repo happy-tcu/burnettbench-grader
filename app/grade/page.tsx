@@ -46,7 +46,7 @@ function formatElapsed(ms: number): string {
 }
 
 const PER_ITEM_CAP_MS = 180_000; // 3 min per-item engaged cap
-const MAX_PAYABLE_MS = 7_200_000; // 2 hr hard cap on billable time per grader
+const MAX_PAYABLE_MS = 18_000_000; // 5 hr hard cap on billable time per grader
 
 export default function Grade() {
   const router = useRouter();

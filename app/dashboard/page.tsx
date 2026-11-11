@@ -272,7 +272,7 @@ export default async function Dashboard() {
   // --- Payment estimates + anti-cheat flags per grader ---
   const HOURLY_RWF = 5000;
   const PER_ITEM_CAP_MS = 180_000; // 3 min per-item cap
-  const MAX_PAYABLE_MS = 7_200_000; // 2 hr hard cap on billable time per grader
+  const MAX_PAYABLE_MS = 18_000_000; // 5 hr hard cap on billable time per grader
 
   function median(xs: number[]): number {
     if (!xs.length) return 0;
@@ -844,8 +844,8 @@ export default async function Dashboard() {
 
       <h2>Payment estimate (5,000 RWF/hr)</h2>
       <p style={{ color: "var(--muted)", fontSize: 12, marginBottom: 12 }}>
-        Engaged time sums each item's rating duration, capped at 3 min per item and 2 hr per grader
-        (max 10,000 RWF). Flags surface patterns worth reviewing before payment: slow median
+        Engaged time sums each item's rating duration, capped at 3 min per item and 5 hr per grader
+        (max 25,000 RWF). Flags surface patterns worth reviewing before payment: slow median
         (padding), many cap-hit items (likely idle), many sub-2s items (speed-cheating), or uniform
         A/B/C across the whole sample (not thinking).
       </p>
